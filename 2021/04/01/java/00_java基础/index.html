@@ -16,7 +16,7 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="通过介绍Java的基础知识,对Java有一个大概了解（Java体系，Java特点，JDK 和 JRE，关键字，注释，运算符）?">
+  <meta name="description" content="通过介绍Java的基础知识,对Java有一个大概了解（Java体系，Java特点，JDK 和 JRE，关键字，注释，运算符）">
   <meta name="author" content="zhaojj">
   <meta name="keywords" content="blog,fluid">
   
@@ -205,7 +205,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      525 字
+      703 字
     </span>
   
 
@@ -215,7 +215,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6
+      8
        分钟
     </span>
   
@@ -257,15 +257,12 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：3 分钟前
+                  本文最后更新于：2 分钟前
                 
               </p>
             
             <div class="markdown-body">
-              <p>通过介绍Java的基础知识,对Java有一个大概了解（Java体系，Java特点，JDK 和 JRE，关键字，注释，运算符）?</p>
-<span id="more"></span>
-
-<h2 id="了解Java体系"><a href="#了解Java体系" class="headerlink" title="了解Java体系"></a>了解Java体系</h2><ul>
+              <h2 id="了解Java体系"><a href="#了解Java体系" class="headerlink" title="了解Java体系"></a>了解Java体系</h2><ul>
 <li><p>JavaSE（J2SE）<br>  Java2 Platform Standard Edition，java平台标准版</p>
 </li>
 <li><p>JavaEE(J2EE)<br>  Java 2 Platform,Enterprise Edition，java平台企业版</p>
@@ -324,6 +321,38 @@
 <h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>!，&amp;&amp;，||</p>
 <h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><p>&lt;&lt;，&gt;&gt;，&gt;&gt;&gt;，&amp;，|，^，~</p>
 <h3 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h3><p>?:</p>
+<h2 id="控制执行流程"><a href="#控制执行流程" class="headerlink" title="控制执行流程"></a>控制执行流程</h2><h3 id="块作用域"><a href="#块作用域" class="headerlink" title="块作用域"></a>块作用域</h3><p>块是指一堆花括号括起来的若干条的Java语句。<br>块确定了变量的作用域。<br>一个块可以嵌套在另一个块中。<br>不能再嵌套着的两个块中声明同名的变量。</p>
+<h3 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h3><ol>
+<li>if-else</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">if</span> (xxx) &#123;<br>    <span class="hljs-comment">// dosomething</span><br>&#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(yyy) &#123;<br>    <span class="hljs-comment">// dosomething</span><br>&#125; <span class="hljs-keyword">else</span> &#123;<br>    <span class="hljs-comment">// dosomething</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>switch</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">switch</span>(expression)&#123; <br>    <span class="hljs-keyword">case</span> value : <br>        <span class="hljs-comment">// dosomething </span><br>        <span class="hljs-keyword">break</span>; <br>    <span class="hljs-comment">//可选 </span><br>    <span class="hljs-keyword">case</span> value : <br>        <span class="hljs-comment">// dosomething </span><br>        <span class="hljs-keyword">break</span>; <br>    <span class="hljs-comment">//可选 </span><br>    <span class="hljs-comment">//你可以有任意数量的case语句 </span><br>    <span class="hljs-keyword">default</span> : <br>        <span class="hljs-comment">//可选 </span><br>        <span class="hljs-comment">// dosomething </span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<div class="note note-warning">
+            <p>需要注意的是，case1 中语句如果没有break,那么满足case1条件的情况下会依次往后执行,直到执行到break;</p>
+          </div>
+
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p>java并没有取消break至标签的用法，但实际上这种操作跟goto是差不多的。</p>
+<ol>
+<li><p>while</p>
+</li>
+<li><p>do-while</p>
+</li>
+<li><p>for</p>
+</li>
+<li><p>foreach</p>
+<p> jdk1.8新特性</p>
+</li>
+<li><p>break</p>
+<p>跳出循环或者退出switch case情况</p>
+</li>
+<li><p>continue</p>
+</li>
+</ol>
 
             </div>
             <hr>
@@ -351,7 +380,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/02/java/data_type/">
+                      <a href="/2021/04/02/java/01_%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">java数据类型</span>
                         <span class="visible-mobile">上一篇</span>

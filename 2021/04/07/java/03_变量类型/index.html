@@ -16,11 +16,11 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="java数据类型(基本数据类型,引用数据类型)?">
+  <meta name="description" content="java变量类型(声明方式,类变量,实例变量,局部变量)">
   <meta name="author" content="zhaojj">
   <meta name="keywords" content="blog,fluid">
   
-  <title>java数据类型 - zhaojj&#39;s blog</title>
+  <title>java变量类型 - zhaojj&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -178,7 +178,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="java数据类型">
+            <span class="h2" id="subtitle" title="java变量类型">
               
             </span>
 
@@ -193,8 +193,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-04-02 21:00" pubdate>
-        2021年4月2日 晚上
+      <time datetime="2021-04-07 00:05" pubdate>
+        2021年4月7日 凌晨
       </time>
     </span>
   
@@ -205,7 +205,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      586 字
+      368 字
     </span>
   
 
@@ -215,7 +215,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6
+      4
        分钟
     </span>
   
@@ -253,88 +253,39 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">java数据类型</h1>
+            <h1 style="display: none">java变量类型</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：3 分钟前
+                  本文最后更新于：2 分钟前
                 
               </p>
             
             <div class="markdown-body">
-              <p>java数据类型(基本数据类型,引用数据类型)?</p>
-<span id="more"></span>
+              <h2 id="声明方式"><a href="#声明方式" class="headerlink" title="声明方式"></a>声明方式</h2><p>以下摘自菜鸟驿站<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="菜鸟驿站-Java 变量类型
+">[1]</span></a></sup></p>
+<blockquote>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs inform7">type identifier <span class="hljs-comment">[ = value]</span><span class="hljs-comment">[, identifier <span class="hljs-comment">[= value]</span> ...]</span> ;<br></code></pre></td></tr></table></figure>
 
+<p>以下列出了一些变量的声明实例,注意某些包含了初始化过程</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-keyword">int</span> a, b, c;         <span class="hljs-comment">// 声明三个int型整数：a、 b、c</span><br><span class="hljs-keyword">int</span> d = <span class="hljs-number">3</span>, e = <span class="hljs-number">4</span>, f = <span class="hljs-number">5</span>; <span class="hljs-comment">// 声明三个整数并赋予初值</span><br><span class="hljs-keyword">byte</span> z = <span class="hljs-number">22</span>;         <span class="hljs-comment">// 声明并初始化 z</span><br><span class="hljs-keyword">String</span> s = <span class="hljs-string">&quot;runoob&quot;</span>;  <span class="hljs-comment">// 声明并初始化字符串 s</span><br><span class="hljs-keyword">double</span> pi = <span class="hljs-number">3.14159</span>; <span class="hljs-comment">// 声明了双精度浮点型变量 pi</span><br><span class="hljs-keyword">char</span> x = <span class="hljs-string">&#x27;x&#x27;</span>;        <span class="hljs-comment">// 声明变量 x 的值是字符 &#x27;x&#x27;。</span><br></code></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h2><ul>
+<li>类变量（静态变量）</li>
+<li>实例变量</li>
+<li>局部变量</li>
+</ul>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Variable</span>&#123;</span><br>    <span class="hljs-comment">// 类变量</span><br>    <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> a=<span class="hljs-number">0</span>;<br>    <span class="hljs-comment">// 实例变量</span><br>    <span class="hljs-keyword">String</span> b=<span class="hljs-string">&quot;hello world&quot;</span>;<br> <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">method</span><span class="hljs-params">()</span></span>&#123;<br>        <span class="hljs-comment">// 局部变量</span><br>        <span class="hljs-keyword">int</span> c =<span class="hljs-number">0</span>;  <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h2><p>分为两种<strong>基本数据类型</strong>，<strong>引用数据类型</strong></p>
-<h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><ol>
-<li>基本数据类型：<ol>
-<li>数值型<ol>
-<li>整数类型<ol>
-<li><a href="#byte">byte</a></li>
-<li><a href="#short">short</a></li>
-<li><a href="#int">int</a></li>
-<li><a href="#long">long</a></li>
-</ol>
-</li>
-<li>浮点类型<ol>
-<li><a href="#float">float</a></li>
-<li><a href="#double">double</a></li>
-</ol>
-</li>
-</ol>
-</li>
-<li>字符型 <a href="#char">char</a></li>
-<li>布尔型 <a href="#boolean">boolean</a></li>
-</ol>
-</li>
-</ol>
-<h3 id="byte"><a href="#byte" class="headerlink" title="byte"></a>byte</h3><ol>
-<li>byte数据类型是8位有符号,以二进制补码表示的整数</li>
-<li>最小值是 -128（-2^7）,最大值是 127（2^7-1）,默认值是 0；</li>
-</ol>
-<h3 id="short"><a href="#short" class="headerlink" title="short"></a>short</h3><ol>
-<li>short 数据类型是 16 位、有符号的以二进制补码表示的整数</li>
-<li>最小值是 -32768（-2^15）,最大值是 32767（2^15 - 1）,默认值是 0；</li>
-</ol>
-<h3 id="int"><a href="#int" class="headerlink" title="int"></a>int</h3><ol>
-<li>int 数据类型是32位、有符号的以二进制补码表示的整数；</li>
-<li>最小值是 -2,147,483,648（-2^31）,最大值是 2,147,483,647（2^31 - 1）,默认值是 0</li>
-</ol>
-<h3 id="long"><a href="#long" class="headerlink" title="long"></a>long</h3><ol>
-<li>long 数据类型是 64 位、有符号的以二进制补码表示的整数；</li>
-<li>最小值是 -9,223,372,036,854,775,808（-2^63）,最大值是 9,223,372,036,854,775,807（2^63 -1）,默认值是 0L；</li>
-<li>“L”理论上不分大小写，但是若写成”l”容易与数字”1”混淆，不容易分辩。所以最好大写。</li>
-</ol>
-<h3 id="float"><a href="#float" class="headerlink" title="float"></a>float</h3><ol>
-<li>float 数据类型是单精度、32位、符合IEEE 754标准的浮点数；</li>
-<li>默认值是 0.0f；</li>
-</ol>
-<h3 id="double"><a href="#double" class="headerlink" title="double"></a>double</h3><ul>
-<li>double 数据类型是双精度、64 位、符合IEEE 754标准的浮点数；</li>
-<li>浮点数的默认类型为double类型；</li>
-<li>默认值是 0.0d；</li>
-</ul>
-<h3 id="boolean"><a href="#boolean" class="headerlink" title="boolean"></a>boolean</h3><ul>
-<li>boolean数据类型表示一位的信息；</li>
-<li>只有两个取值：true 和 false；</li>
-<li>这种类型只作为一种标志来记录 true/false 情况；</li>
-<li>默认值是 false；</li>
-</ul>
-<h3 id="char"><a href="#char" class="headerlink" title="char"></a>char</h3><ul>
-<li>char类型是一个单一的 16 位 Unicode 字符；</li>
-<li>最小值是 \u0000（即为0）,最大值是 \uffff（即为65,535）；</li>
-<li>char 数据类型可以储存任何字符；</li>
-</ul>
-<h2 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h2><ol>
-<li>类</li>
-<li>接口</li>
-<li>数组</li>
-<li>枚举类型</li>
-<li>注解类型</li>
-</ol>
-<h2 id="基础数据类型与引用数据类型的区别"><a href="#基础数据类型与引用数据类型的区别" class="headerlink" title="基础数据类型与引用数据类型的区别"></a>基础数据类型与引用数据类型的区别</h2><p>基本数据类型在被创建时，在栈上给其划分一块内存，将数值直接存储在栈上。<br>引用数据类型在被创建时，首先要在栈上给其引用（句柄）分配一块内存，而对象的具体信息都存储在堆内存上，然后由栈上面的引用指向堆中对象的地址。</p>
-
+<h3 id="类变量"><a href="#类变量" class="headerlink" title="类变量"></a>类变量</h3><p>类变量也成为静态变量，在类中以static关键字声明，但必须在方法外。</p>
+<p>无论一个类创建了多少个对象，类只拥有类变量的一份拷贝。具体请参看类的初始化。</p>
+<p>类变量可通过：ClassName.VariableName的方式访问</p>
+<h3 id="实例变量"><a href="#实例变量" class="headerlink" title="实例变量"></a>实例变量</h3><p>实例变量声明在一个类中，但在方法、构造方法和语句块之外；</p>
+<h3 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h3><p>局部变量声明在方法、构造方法或者语句块中；</p>
+<p>访问修饰符不能用于局部变量；</p>
+<p>局部变量没有默认值，所以局部变量被声明后，必须经过初始化，才可以使用。</p>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.runoob.com/java/java-variable-types.html">菜鸟驿站-Java 变量类型</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
             <div>
@@ -365,8 +316,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/01/java/java_base/">
-                        <span class="hidden-mobile">java基础</span>
+                      <a href="/2021/04/02/java/01_%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+                        <span class="hidden-mobile">java数据类型</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
