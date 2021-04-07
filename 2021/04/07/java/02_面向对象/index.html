@@ -16,11 +16,11 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="java数据类型(基本数据类型,引用数据类型)">
+  <meta name="description" content="java面向对象">
   <meta name="author" content="zhaojj">
   <meta name="keywords" content="blog,fluid">
   
-  <title>java数据类型 - zhaojj&#39;s blog</title>
+  <title>java面向对象 - zhaojj&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -178,7 +178,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="java数据类型">
+            <span class="h2" id="subtitle" title="java面向对象">
               
             </span>
 
@@ -193,8 +193,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-04-02 21:00" pubdate>
-        2021年4月2日 晚上
+      <time datetime="2021-04-07 18:10" pubdate>
+        2021年4月7日 晚上
       </time>
     </span>
   
@@ -205,7 +205,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      603 字
+      1.1k 字
     </span>
   
 
@@ -215,7 +215,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7
+      11
        分钟
     </span>
   
@@ -253,87 +253,90 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">java数据类型</h1>
+            <h1 style="display: none">java面向对象</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：9 小时前
+                  本文最后更新于：2 分钟前
                 
               </p>
             
             <div class="markdown-body">
-              <h2 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h2><p>分为两种<strong>基本数据类型</strong>，<strong>引用数据类型</strong></p>
-<h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><ol>
-<li>基本数据类型：<ol>
-<li>数值型<ol>
-<li>整数类型<ol>
-<li><a href="#byte">byte</a></li>
-<li><a href="#short">short</a></li>
-<li><a href="#int">int</a></li>
-<li><a href="#long">long</a></li>
+              <h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><ol>
+<li><strong>类</strong> 构造对象的模板或蓝图</li>
+<li><strong>对象</strong></li>
+<li><strong>构造</strong></li>
+<li><strong>实例</strong></li>
+<li><strong>封装</strong></li>
+<li><strong>实例域</strong></li>
+<li><strong>方法</strong></li>
+<li><strong>状态</strong></li>
+<li><strong>继承</strong></li>
+<li><strong>重载</strong></li>
+<li><strong>重写</strong></li>
 </ol>
-</li>
-<li>浮点类型<ol>
-<li><a href="#float">float</a></li>
-<li><a href="#double">double</a></li>
+<h2 id="面向对象思想"><a href="#面向对象思想" class="headerlink" title="面向对象思想"></a>面向对象思想</h2><p>我们将问题空间中的元素及其在解空间中的表示称为对象。对象具有状态、行为和标识。</p>
+<p>程序可以通过添加新类型的对象使自身适用于某个特定问题，当你在阅读描述解决方案的代码时，也是在阅读问题的表述。</p>
+<ol>
+<li>万物皆对象；</li>
+<li>程序是对象的结合，它们通过发送消息来告知彼此所要做的；</li>
+<li>每个对象都有自己的由其他对象所构成的存储；</li>
+<li>每个对象都拥有其类型；</li>
+<li>某一特定类型的所有对象都可以接受同样的消息。</li>
 </ol>
-</li>
+<h2 id="面向过程与面向对象的优缺点"><a href="#面向过程与面向对象的优缺点" class="headerlink" title="面向过程与面向对象的优缺点"></a>面向过程与面向对象的优缺点</h2><ul>
+<li>  性能</li>
+<li>  维护、复用、扩展</li>
+</ul>
+<h2 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h2><h2 id="Java-继承"><a href="#Java-继承" class="headerlink" title="Java 继承"></a>Java 继承</h2><p>在创建一个类之后，即使另一个新类与其具有相似的功能，你还是得重新创建一个新类。通过添加和修改这个副本来创建新类就好多了。即继承便可以达到这样的效果。</p>
+<ol>
+<li>单根继承（多继承，过于复杂，难于维护）</li>
+<li>类没有多继承， 接口有多继承</li>
+<li>子类继承父类，可以得到父类的全部属性和方法，但不见得可以直接访问</li>
+<li>所有类的父类是 Object </li>
 </ol>
-</li>
-<li>字符型 <a href="#char">char</a></li>
-<li>布尔型 <a href="#boolean">boolean</a></li>
+<h3 id="继承的优点"><a href="#继承的优点" class="headerlink" title="继承的优点"></a>继承的优点</h3><ol>
+<li>代码共享</li>
+<li>提高代码的重用性</li>
+<li>提高代码的可扩展性</li>
+<li>提高产品或者项目的开放性</li>
 </ol>
-</li>
+<h3 id="继承的缺点"><a href="#继承的缺点" class="headerlink" title="继承的缺点"></a>继承的缺点</h3><ol>
+<li>继承是侵入性的。</li>
+<li>继承代码的灵活性</li>
+<li>增强耦合性</li>
 </ol>
-<h3 id="byte"><a href="#byte" class="headerlink" title="byte"></a>byte</h3><ol>
-<li>byte数据类型是8位有符号,以二进制补码表示的整数</li>
-<li>最小值是 -128（-2^7）,最大值是 127（2^7-1）,默认值是 0；</li>
+<h3 id="单继承"><a href="#单继承" class="headerlink" title="单继承"></a>单继承</h3><p>为了降低复杂性和避免冲突，C类同时继承A类，B类，可能会出现冲突。</p>
+<h2 id="Java-多态"><a href="#Java-多态" class="headerlink" title="Java 多态"></a>Java 多态</h2><p>父类引用指向子类的对象。通过分离做什么和怎么做，将接口和实现分离。目的是消除类型之间的耦合关系，将改变的事物与未变的事务分离开来。</p>
+<p>面向对象的多态性，即“一个接口，多个方法”。多态性体现在父类中定义的属性和方法被子类继承后，可以具有不同的属性或表现方式。多态性允许一个接口被多个同类使用，弥补了单继承的不足。</p>
+<h2 id="Java-封装"><a href="#Java-封装" class="headerlink" title="Java 封装"></a>Java 封装</h2><p>封装是将代码及其处理的数据绑定在一起的一种编程机制，该机制保证了程序和数据都不受外部干扰且不被误用。封装的目的在于保护信息，隐藏对象的属性和实现细节，仅对外公开接口，控制在程序中属性的读和修改的访问级别。</p>
+<h2 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h2><p>为了让方法名相同而形参不同的方法或者构造器同时存在</p>
+<p>参数类型、个数、顺序至少有一个不相同。 </p>
+<p>不能重载只有返回值不同的方法名。 </p>
+<p>存在于父类和子类、同类中。</p>
+<p>而重载的规则 </p>
+<ol>
+<li>必须具有不同的参数列表。 </li>
+<li>可以有不同的返回类型，只要参数列表不同就可以了。 </li>
+<li>可以有不同的访问修饰符。 </li>
+<li>可以抛出不同的异常。  </li>
 </ol>
-<h3 id="short"><a href="#short" class="headerlink" title="short"></a>short</h3><ol>
-<li>short 数据类型是 16 位、有符号的以二进制补码表示的整数</li>
-<li>最小值是 -32768（-2^15）,最大值是 32767（2^15 - 1）,默认值是 0；</li>
-</ol>
-<h3 id="int"><a href="#int" class="headerlink" title="int"></a>int</h3><ol>
-<li>int 数据类型是32位、有符号的以二进制补码表示的整数；</li>
-<li>最小值是 -2,147,483,648（-2^31）,最大值是 2,147,483,647（2^31 - 1）,默认值是 0</li>
-</ol>
-<h3 id="long"><a href="#long" class="headerlink" title="long"></a>long</h3><ol>
-<li>long 数据类型是 64 位、有符号的以二进制补码表示的整数；</li>
-<li>最小值是 -9,223,372,036,854,775,808（-2^63）,最大值是 9,223,372,036,854,775,807（2^63 -1）,默认值是 0L；</li>
-<li>“L”理论上不分大小写，但是若写成”l”容易与数字”1”混淆，不容易分辩。所以最好大写。</li>
-</ol>
-<h3 id="float"><a href="#float" class="headerlink" title="float"></a>float</h3><ol>
-<li>float 数据类型是单精度、32位、符合IEEE 754标准的浮点数；</li>
-<li>默认值是 0.0f；</li>
-</ol>
-<div class="note note-info">
-            <p>float类型的数值有一个后缀F，没有后缀F的浮点数值默认为double类型。</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">float</span> a = <span class="hljs-number">3</span>.<span class="hljs-number">14</span>f;<br><span class="hljs-attribute">double</span> b= <span class="hljs-number">3</span>.<span class="hljs-number">14</span>;<br></code></pre></td></tr></table></figure>
-          </div>
+<p>如果传入的数据类型（实参）小于方法中声明的形式参数类型（形参），实际数据类型就会提升。</p>
+<p>如果传入的数据类型（实参）大于方法中声明的形式参数类型（形参），需要通过强制类型转化才能传递。</p>
+<p><strong>重载+变长参数</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">f</span><span class="hljs-params">(<span class="hljs-keyword">float</span> i, Character... args)</span> </span>&#123;<br><br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">f</span><span class="hljs-params">(Character... args)</span> </span>&#123;<br><br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        f(<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;a&#x27;</span>);<br>        f(<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>);<br>        System.out.println(<span class="hljs-number">1</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h3 id="double"><a href="#double" class="headerlink" title="double"></a>double</h3><ul>
-<li>double 数据类型是双精度、64 位、符合IEEE 754标准的浮点数；</li>
-<li>浮点数的默认类型为double类型；</li>
-<li>默认值是 0.0d；</li>
-</ul>
-<h3 id="boolean"><a href="#boolean" class="headerlink" title="boolean"></a>boolean</h3><ul>
-<li>boolean数据类型表示一位的信息；</li>
-<li>只有两个取值：true 和 false；</li>
-<li>这种类型只作为一种标志来记录 true/false 情况；</li>
-<li>默认值是 false；</li>
-</ul>
-<h3 id="char"><a href="#char" class="headerlink" title="char"></a>char</h3><ul>
-<li>char类型是一个单一的 16 位 Unicode 字符；</li>
-<li>最小值是 \u0000（即为0）,最大值是 \uffff（即为65,535）；</li>
-<li>char 数据类型可以储存任何字符；</li>
-</ul>
-<h2 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h2><ol>
-<li>类</li>
-<li>接口</li>
-<li>数组</li>
-<li>枚举类型</li>
-<li>注解类型</li>
-</ol>
-<h2 id="基础数据类型与引用数据类型的区别"><a href="#基础数据类型与引用数据类型的区别" class="headerlink" title="基础数据类型与引用数据类型的区别"></a>基础数据类型与引用数据类型的区别</h2><p>基本数据类型在被创建时，在栈上给其划分一块内存，将数值直接存储在栈上。<br>引用数据类型在被创建时，首先要在栈上给其引用（句柄）分配一块内存，而对象的具体信息都存储在堆内存上，然后由栈上面的引用指向堆中对象的地址。</p>
+
+
+
+
+<p><em>为什么java不通过返回值区分重载方法，而是方法名？</em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 参考如下代码</span><br><span class="hljs-comment">// 而f函数可能有很多种实现方式，编译器并不能知道你究竟要调哪一个</span><br>f();<br></code></pre></td></tr></table></figure>
+
+<h2 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h2><p>方法名、参数、返回值相同。</p>
+<p>子类方法不能缩小父类方法的访问权限。</p>
+<p>子类方法不能抛出比父类方法更多的异常(但子类方法可以不抛出异常)。</p>
+<p>存在于父类和子类之间。 方法被定义为 final 不能被重写。  </p>
 
             </div>
             <hr>
@@ -361,18 +364,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/07/java/03_%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">java变量类型</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/01/java/00_java%E5%9F%BA%E7%A1%80/">
-                        <span class="hidden-mobile">java基础</span>
+                      <a href="/2021/04/07/java/03_%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B/">
+                        <span class="hidden-mobile">java变量类型</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
