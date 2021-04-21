@@ -16,11 +16,11 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="通过介绍Java的基础知识,对Java有一个大概了解（Java体系，Java特点，JDK 和 JRE，关键字，注释，运算符）">
+  <meta name="description" content="Java程序基本结构">
   <meta name="author" content="zhaojj">
   <meta name="keywords" content="blog,fluid">
   
-  <title>java基础 - zhaojj&#39;s blog</title>
+  <title>Java程序基本结构 - zhaojj&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -178,7 +178,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="java基础">
+            <span class="h2" id="subtitle" title="Java程序基本结构">
               
             </span>
 
@@ -193,7 +193,7 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-04-01 21:27" pubdate>
+      <time datetime="2021-04-01 21:45" pubdate>
         2021年4月1日 晚上
       </time>
     </span>
@@ -205,7 +205,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      703 字
+      170 字
     </span>
   
 
@@ -215,7 +215,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8
+      2
        分钟
     </span>
   
@@ -253,105 +253,25 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">java基础</h1>
+            <h1 style="display: none">Java程序基本结构</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：3 天前
+                  本文最后更新于：31 分钟前
                 
               </p>
             
             <div class="markdown-body">
-              <h2 id="了解Java体系"><a href="#了解Java体系" class="headerlink" title="了解Java体系"></a>了解Java体系</h2><ul>
-<li><p>JavaSE（J2SE）<br>  Java2 Platform Standard Edition，java平台标准版</p>
-</li>
-<li><p>JavaEE(J2EE)<br>  Java 2 Platform,Enterprise Edition，java平台企业版</p>
-</li>
-<li><p>JavaME(J2ME)<br>  Java 2 Platform Micro Edition，java平台微型版</p>
-</li>
-</ul>
-<h2 id="Java-特点"><a href="#Java-特点" class="headerlink" title="Java 特点"></a>Java 特点</h2><ul>
-<li>  简单性</li>
-<li>  面向对象</li>
-<li>  健壮性</li>
-<li>  安全性</li>
-<li>  网络技能(Network-Savvy)</li>
-<li>  体系结构中立</li>
-<li>  可移植性</li>
-<li>  解释型</li>
-<li>  高性能</li>
-<li>  多线程</li>
-<li>  动态性</li>
-</ul>
-<h2 id="JDK-和-JRE"><a href="#JDK-和-JRE" class="headerlink" title="JDK 和 JRE"></a>JDK 和 JRE</h2><p>JDK = Java程序设计语言 + Java虚拟机 + Java API类库</p>
-<p>JRE = Java API 类库中的 Java SE API子集 + Java 虚拟机</p>
-<h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><h3 id="访问控制"><a href="#访问控制" class="headerlink" title="访问控制"></a>访问控制</h3><p>public、protected、private</p>
-<h3 id="类方法和变量修饰符"><a href="#类方法和变量修饰符" class="headerlink" title="类方法和变量修饰符"></a>类方法和变量修饰符</h3><p>class、interface、abstract、implements、extends、new</p>
-<p>static、final、super、this、native、strictfp、synchronized、transient、volatile</p>
-<h3 id="程序控制语句"><a href="#程序控制语句" class="headerlink" title="程序控制语句"></a>程序控制语句</h3><p>if、else、while、for、switch、case、default、do、break、continue、return、instanceof</p>
-<h3 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h3><p>catch、try、finally、throw、throws</p>
-<h3 id="包相关"><a href="#包相关" class="headerlink" title="包相关"></a>包相关</h3><p>import、package</p>
-<h3 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h3><p>byte、char、boolean、short、int、float、long、double、void、enum</p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>assert、null、true、false</p>
-<h3 id="保留字"><a href="#保留字" class="headerlink" title="保留字"></a>保留字</h3><p>goto、const</p>
-<h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><ol>
-<li>大小写字母，数字，_或者$组成</li>
-<li>数字不可以开头</li>
-<li>不能使用关键字和保留字</li>
-<li>区分大小写，长度无限制</li>
-<li>标识符不能包含空格</li>
-</ol>
-<p>命名规范：</p>
+              <h2 id="Java文件示例"><a href="#Java文件示例" class="headerlink" title="Java文件示例"></a>Java文件示例</h2><p>以下是一段Java代码的示例，将上一节中所提到的一些关键字及注释使用了进来，具体关键字的用法后面会详细展开，现在请先关注Java程序结构。</p>
+<p>以下代码被命名为<code>HelloWorld.java</code>。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> mypack;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * HelloWorld类</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span></span>&#123;<br>    <span class="hljs-keyword">static</span> Greating g = <span class="hljs-keyword">new</span> Greating();<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;<br>        <span class="hljs-comment">// 打招呼</span><br>        System.out.println(g.say()); <br>    &#125;<br>&#125;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Greating</span></span>&#123;<br>    <span class="hljs-keyword">public</span> String words = <span class="hljs-string">&quot;hello&quot;</span>;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">say</span><span class="hljs-params">()</span></span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.words;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h2><p>类名必须以英文字母开头，后接字母，数字和下划线的组合</p>
 <ol>
 <li>包名：xxx.yyy.zzz</li>
 <li>类名、接口名：Xxx</li>
 <li>变量名、方法名：xxxYyyZzz</li>
 <li>常量名：XXX_YYY_ZZZ</li>
-</ol>
-<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><h3 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 单行注释</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/*</span><br><span class="hljs-comment"> * 多行注释</span><br><span class="hljs-comment"> */</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="文档注释"><a href="#文档注释" class="headerlink" title="文档注释"></a>文档注释</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@see</span> classname(fully-qualified-classname/fully-qualified-classname#method-name) 引用其他类</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@link</span> package.class#member label 使用label作为超链接的行内引用其他类</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@docRoot</span> 该标签产生到文档根目录的相对路径</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@inheritDoc</span> 从当前这个类的组直接的基类中继承相关文档到当前的文档注释中</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@author</span> 作者</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@version</span> 指定源文件的版本</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@since</span> 运行你指定程序代码最早使用的版本</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@param</span> 参数</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@return</span> 返回值</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@throws</span> 异常</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@deprecated</span> 过时方法</span><br><span class="hljs-comment">  */</span><br></code></pre></td></tr></table></figure>
-
-
-<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><p>+，-，*，/，%，++，–</p>
-<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><p>=，+=，-=，*=，/=，%=</p>
-<h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><p>==，!=，&gt;，&lt;，&gt;=，&lt;=，instanceof</p>
-<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>!，&amp;&amp;，||</p>
-<h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><p>&lt;&lt;，&gt;&gt;，&gt;&gt;&gt;，&amp;，|，^，~</p>
-<h3 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h3><p>?:</p>
-<h2 id="控制执行流程"><a href="#控制执行流程" class="headerlink" title="控制执行流程"></a>控制执行流程</h2><h3 id="块作用域"><a href="#块作用域" class="headerlink" title="块作用域"></a>块作用域</h3><p>块是指一堆花括号括起来的若干条的Java语句。<br>块确定了变量的作用域。<br>一个块可以嵌套在另一个块中。<br>不能再嵌套着的两个块中声明同名的变量。</p>
-<h3 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h3><ol>
-<li>if-else</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">if</span> (xxx) &#123;<br>    <span class="hljs-comment">// dosomething</span><br>&#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(yyy) &#123;<br>    <span class="hljs-comment">// dosomething</span><br>&#125; <span class="hljs-keyword">else</span> &#123;<br>    <span class="hljs-comment">// dosomething</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>switch</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">switch</span>(expression)&#123; <br>    <span class="hljs-keyword">case</span> value : <br>        <span class="hljs-comment">// dosomething </span><br>        <span class="hljs-keyword">break</span>; <br>    <span class="hljs-comment">//可选 </span><br>    <span class="hljs-keyword">case</span> value : <br>        <span class="hljs-comment">// dosomething </span><br>        <span class="hljs-keyword">break</span>; <br>    <span class="hljs-comment">//可选 </span><br>    <span class="hljs-comment">//你可以有任意数量的case语句 </span><br>    <span class="hljs-keyword">default</span> : <br>        <span class="hljs-comment">//可选 </span><br>        <span class="hljs-comment">// dosomething </span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<div class="note note-warning">
-            <p>需要注意的是，case1 中语句如果没有break,那么满足case1条件的情况下会依次往后执行,直到执行到break;</p>
-          </div>
-
-<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p>java并没有取消break至标签的用法，但实际上这种操作跟goto是差不多的。</p>
-<ol>
-<li><p>while</p>
-</li>
-<li><p>do-while</p>
-</li>
-<li><p>for</p>
-</li>
-<li><p>foreach</p>
-<p> jdk1.8新特性</p>
-</li>
-<li><p>break</p>
-<p>跳出循环或者退出switch case情况</p>
-</li>
-<li><p>continue</p>
-</li>
 </ol>
 
             </div>
@@ -363,7 +283,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/java/">java</a>
+                      <a class="hover-with-bg" href="/tags/Java/">Java</a>
                     
                   </div>
                 
@@ -380,9 +300,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/02/java/01_%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+                      <a href="/2021/04/01/java/base/02_%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">java数据类型</span>
+                        <span class="hidden-mobile">Java数据类型</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -390,8 +310,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/01/KnowledgeList/">
-                        <span class="hidden-mobile">知识目录</span>
+                      <a href="/2021/04/01/java/base/00_Java%E5%9F%BA%E7%A1%80/">
+                        <span class="hidden-mobile">Java基础</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
