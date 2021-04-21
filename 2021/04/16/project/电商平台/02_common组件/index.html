@@ -257,12 +257,16 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 小时前
+                  本文最后更新于：几秒前
                 
               </p>
             
             <div class="markdown-body">
-              <h2 id="统一返回结果"><a href="#统一返回结果" class="headerlink" title="统一返回结果"></a>统一返回结果</h2><h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><p>在编写代码时,给前端返回一个格式统一的json结构,通常使用一个<code>Result</code>类来包装。</p>
+              <div class="note note-success">
+            <p><strong>项目地址</strong> <a target="_blank" rel="noopener" href="https://github.com/sandorZHAO/shop">https://github.com/sandorZHAO/shop</a></p>
+          </div>
+
+<h2 id="统一返回结果"><a href="#统一返回结果" class="headerlink" title="统一返回结果"></a>统一返回结果</h2><h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><p>在编写代码时,给前端返回一个格式统一的json结构,通常使用一个<code>Result</code>类来包装。</p>
 <p>再给前台返回时可以使用这样的操作：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@GetMapping(&quot;/find/&#123;addressId&#125;&quot;)</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> Result&lt;AddressDO&gt; <span class="hljs-title">findAddressById</span><span class="hljs-params">(<span class="hljs-meta">@PathVariable(&quot;addressId&quot;)</span> <span class="hljs-keyword">long</span> addressId)</span> </span>&#123;<br>    AddressDO address = addressService.findAddress(addressId);<br>    <span class="hljs-keyword">return</span> Result.ofSuccess(address);<br>&#125;<br></code></pre></td></tr></table></figure>
 
@@ -282,7 +286,6 @@
 <h3 id="业务场景改进-demo"><a href="#业务场景改进-demo" class="headerlink" title="业务场景改进(demo)"></a>业务场景改进(demo)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@GetMapping(&quot;/find/&#123;addressId&#125;&quot;)</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> Result&lt;AddressDO&gt; <span class="hljs-title">findAddressById</span><span class="hljs-params">(<span class="hljs-meta">@PathVariable(&quot;addressId&quot;)</span> <span class="hljs-keyword">long</span> addressId)</span> </span>&#123;<br>    AddressDO address = addressService.findAddress(addressId);<br>    <span class="hljs-keyword">if</span>(addressId == <span class="hljs-number">1</span>)&#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> BizException(ResultCode.INNER_EXCEPTION);<br>    &#125;<span class="hljs-keyword">else</span>&#123;<br>        <span class="hljs-keyword">return</span> Result.ofSuccess(address);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>这里改进了之前的业务场景，假定查询id为1的地址时会抛出异常<code>BizException</code>，这时代码就进入了全局异常处理类中了(统一的去处理异常)。</p>
-<h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h2><p><a target="_blank" rel="noopener" href="https://github.com/sandorZHAO/shop">https://github.com/sandorZHAO/shop</a></p>
 
             </div>
             <hr>
@@ -317,9 +320,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/18/project/%E7%94%B5%E5%95%86%E5%B9%B3%E5%8F%B0/03-swagger/">
+                      <a href="/2021/04/18/project/%E7%94%B5%E5%95%86%E5%B9%B3%E5%8F%B0/04_%E7%94%A8%E6%88%B7%E6%A8%A1%E5%9D%97/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">电商平台-swagger</span>
+                        <span class="hidden-mobile">电商平台-用户模块</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
