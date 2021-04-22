@@ -16,11 +16,11 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="Java面向对象">
+  <meta name="description" content="java Object">
   <meta name="author" content="zhaojj">
   <meta name="keywords" content="blog,fluid">
   
-  <title>Java面向对象 - zhaojj&#39;s blog</title>
+  <title>Java Object - zhaojj&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -178,7 +178,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Java面向对象">
+            <span class="h2" id="subtitle" title="Java Object">
               
             </span>
 
@@ -193,8 +193,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-04-07 18:10" pubdate>
-        2021年4月7日 晚上
+      <time datetime="2021-04-22 18:50" pubdate>
+        2021年4月22日 晚上
       </time>
     </span>
   
@@ -205,7 +205,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.1k 字
+      939 字
     </span>
   
 
@@ -215,7 +215,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      10
        分钟
     </span>
   
@@ -253,91 +253,74 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Java面向对象</h1>
+            <h1 style="display: none">Java Object</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 小时前
+                  本文最后更新于：几秒前
                 
               </p>
             
             <div class="markdown-body">
-              <h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><ol>
-<li><strong>类</strong> 构造对象的模板或蓝图</li>
-<li><strong>对象</strong></li>
-<li><strong>构造</strong></li>
-<li><strong>实例</strong></li>
-<li><strong>封装</strong></li>
-<li><strong>实例域</strong></li>
-<li><strong>方法</strong></li>
-<li><strong>状态</strong></li>
-<li><strong>继承</strong></li>
-<li><strong>重载</strong></li>
-<li><strong>重写</strong></li>
-</ol>
-<h2 id="面向对象思想"><a href="#面向对象思想" class="headerlink" title="面向对象思想"></a>面向对象思想</h2><p>我们将问题空间中的元素及其在解空间中的表示称为对象。对象具有状态、行为和标识。</p>
-<p>程序可以通过添加新类型的对象使自身适用于某个特定问题，当你在阅读描述解决方案的代码时，也是在阅读问题的表述。</p>
+              <h2 id="一切皆对象-Object"><a href="#一切皆对象-Object" class="headerlink" title="一切皆对象 Object"></a>一切皆对象 Object</h2><h2 id="Object方法"><a href="#Object方法" class="headerlink" title="Object方法"></a>Object方法</h2><h3 id="getClass"><a href="#getClass" class="headerlink" title="getClass"></a>getClass</h3><p>用来获取运行时的对象；当声明对象和.class 文件中真正的对象不一致时，该方法会返回.class 的对象</p>
+<p>主要用于 Java 的反射 <code>public final native Class&lt;?&gt; getClass();</code></p>
+<h3 id="hashCode"><a href="#hashCode" class="headerlink" title="hashCode"></a>hashCode</h3><p>用来获取一个对象 int 类型的 hash 码</p>
+<p><code>public native int hashCode();</code></p>
 <ol>
-<li>万物皆对象；</li>
-<li>程序是对象的结合，它们通过发送消息来告知彼此所要做的；</li>
-<li>每个对象都有自己的由其他对象所构成的存储；</li>
-<li>每个对象都拥有其类型；</li>
-<li>某一特定类型的所有对象都可以接受同样的消息。</li>
+<li>native</li>
+<li>没有 final，可重写</li>
+<li>注意点<ol>
+<li>在 java 程序执行过程中，在一个对象没有被改变的前提下，无论这个对象被调用多少次，hashCode 方法都会返回相同的 int 值。这个 int 值可在不同的程序中不同;</li>
+<li>如果 2 个对象使用 equals 方法进行比较并且相同的话，那么这 2 个对象的 hashCode 方法的值也必须相等;</li>
+<li>如果根据 equals 方法，得到两个对象不相等，那么这 2 个对象的 hashCode 值可以不相同; 但是，不相等的对象的 hashCode 值不同的话可以提高哈希表的性能;</li>
 </ol>
-<h2 id="面向过程与面向对象的优缺点"><a href="#面向过程与面向对象的优缺点" class="headerlink" title="面向过程与面向对象的优缺点"></a>面向过程与面向对象的优缺点</h2><ul>
-<li>  性能</li>
-<li>  维护、复用、扩展</li>
-</ul>
-<h2 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h2><h2 id="Java-继承"><a href="#Java-继承" class="headerlink" title="Java 继承"></a>Java 继承</h2><p>在创建一个类之后，即使另一个新类与其具有相似的功能，你还是得重新创建一个新类。通过添加和修改这个副本来创建新类就好多了。即继承便可以达到这样的效果。</p>
+</li>
+</ol>
+<h3 id="equals"><a href="#equals" class="headerlink" title="equals"></a>equals</h3><p>是比较两个对象是否相等</p>
+<p>默认是实现是比较引用是否相同, 即是否为同一个内存对象;</p>
 <ol>
-<li>单根继承（多继承，过于复杂，难于维护）</li>
-<li>类没有多继承， 接口有多继承</li>
-<li>子类继承父类，可以得到父类的全部属性和方法，但不见得可以直接访问</li>
-<li>所有类的父类是 Object </li>
+<li>自反性 对于任意非空对象 x,x.equals(x)=true</li>
+<li>对称性 对于任意非空对象 x,y, x.equals(y) = y.equals.(x)</li>
+<li>传递性 对于任意非空对象 x,y,z, 若有 x.equals(y) , y.equals.(z),则 x.equals(z) =true</li>
+<li>一致性 对于任意非空对象 x,y, x,y 都没有修改的前提下，x.equals(y)值唯一</li>
+<li>对于任意非空对象 x,x.equals(null)，一定为 false</li>
+<li>重写 equals 最好重写 hashcode</li>
 </ol>
-<h3 id="继承的优点"><a href="#继承的优点" class="headerlink" title="继承的优点"></a>继承的优点</h3><ol>
-<li>代码共享</li>
-<li>提高代码的重用性</li>
-<li>提高代码的可扩展性</li>
-<li>提高产品或者项目的开放性</li>
+<h3 id="clone"><a href="#clone" class="headerlink" title="clone"></a>clone</h3><p><code>protected native Object clone() throws CloneNotSupportedException;</code></p>
+<p>返回当前对象的一份拷贝</p>
+<p>引申出深拷贝和浅拷贝</p>
+<blockquote>
+<p>浅拷贝：基本数据类型直接值传递，引用数据类型拷贝引用地址</p>
+<p>深拷贝：复制对象的所有基本数据类型，为所有引用数据类型的成员变量申请存储空间</p>
+</blockquote>
+<h3 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a>toString</h3><h3 id="notify-和-notifyAll-和-wait"><a href="#notify-和-notifyAll-和-wait" class="headerlink" title="notify 和 notifyAll 和 wait"></a>notify 和 notifyAll 和 wait</h3><ol>
+<li><p>wait 在同步代码块中调用该方法时，当前线程立即释放锁并等待，知道有其他线程调用</p>
+</li>
+<li><p>notify/notifyAll 或等待超时时，才会去再次竞争锁，成功后继续执行下面的逻辑</p>
+</li>
+<li><p>wait<br><code>public final native void wait(long timeout) throws InterruptedException;</code></p>
+</li>
+<li><p>notify</p>
+<p>线程 A 在同步代码块中调用该方法，会随机地唤醒一个等待在该对象锁上的线程 B，主语这时候唤醒的线程 B 还没有持有锁，必须要等到线程 A 释放锁才能持有该锁。</p>
+<blockquote>
+<p>如果线程在 A 对象的同步代码块中执行 B 对象的 notify，会抛出 <code>illegalMonitorStateException</code></p>
+</blockquote>
+</li>
+<li><p>notyfyAll</p>
+<p>线程 A 在同步代码块中调用该方法时，会唤醒所有等待在该锁上的线程，同样的，这些唤醒的线程只有在线程 A 放锁以后，才能再次竞争该锁，竞争到该锁的线程继续执行，其他线程等待</p>
+<blockquote>
+<p>如果调用的线程不是该锁的持有者，那么也会抛出<code>illegalMonitorStateException</code></p>
+</blockquote>
+</li>
 </ol>
-<h3 id="继承的缺点"><a href="#继承的缺点" class="headerlink" title="继承的缺点"></a>继承的缺点</h3><ol>
-<li>继承是侵入性的。</li>
-<li>继承代码的灵活性</li>
-<li>增强耦合性</li>
-</ol>
-<h3 id="单继承"><a href="#单继承" class="headerlink" title="单继承"></a>单继承</h3><p>为了降低复杂性和避免冲突，C类同时继承A类，B类，可能会出现冲突。</p>
-<h2 id="Java-多态"><a href="#Java-多态" class="headerlink" title="Java 多态"></a>Java 多态</h2><p>父类引用指向子类的对象。通过分离做什么和怎么做，将接口和实现分离。目的是消除类型之间的耦合关系，将改变的事物与未变的事务分离开来。</p>
-<p>面向对象的多态性，即“一个接口，多个方法”。多态性体现在父类中定义的属性和方法被子类继承后，可以具有不同的属性或表现方式。多态性允许一个接口被多个同类使用，弥补了单继承的不足。</p>
-<h2 id="Java-封装"><a href="#Java-封装" class="headerlink" title="Java 封装"></a>Java 封装</h2><p>封装是将代码及其处理的数据绑定在一起的一种编程机制，该机制保证了程序和数据都不受外部干扰且不被误用。封装的目的在于保护信息，隐藏对象的属性和实现细节，仅对外公开接口，控制在程序中属性的读和修改的访问级别。</p>
-<h2 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h2><p>为了让方法名相同而形参不同的方法或者构造器同时存在</p>
-<p>参数类型、个数、顺序至少有一个不相同。 </p>
-<p>不能重载只有返回值不同的方法名。 </p>
-<p>存在于父类和子类、同类中。</p>
-<p>而重载的规则 </p>
+<h3 id="finalize"><a href="#finalize" class="headerlink" title="finalize"></a>finalize</h3><p><code>protected void finalize() throws Throwable &#123; &#125;</code></p>
+<p>JVM 在进行 GC 时，如果这个对象需要被回收，会判断该方法是否被重写，若未重写，则直接回收该对象内存空间。反之，判断该对象的 finalize 是否被执行过，若没有执行过，会放入一个队列，由低优先级的线程去执行该对象的 finalize 方法，执行完毕后再判断该对象是否需要回收；如果该对象已经执行一遍finalize 方法，直接回收对象的内存空间</p>
 <ol>
-<li>必须具有不同的参数列表。 </li>
-<li>可以有不同的返回类型，只要参数列表不同就可以了。 </li>
-<li>可以有不同的访问修饰符。 </li>
-<li>可以抛出不同的异常。  </li>
+<li>对象可能不被垃圾回收</li>
+<li>垃圾回收并不等于析构</li>
+<li>垃圾回收只与内存有关</li>
 </ol>
-<p>如果传入的数据类型（实参）小于方法中声明的形式参数类型（形参），实际数据类型就会提升。</p>
-<p>如果传入的数据类型（实参）大于方法中声明的形式参数类型（形参），需要通过强制类型转化才能传递。</p>
-<p><strong>重载+变长参数</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">f</span><span class="hljs-params">(<span class="hljs-keyword">float</span> i, Character... args)</span> </span>&#123;<br><br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">f</span><span class="hljs-params">(Character... args)</span> </span>&#123;<br><br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        f(<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;a&#x27;</span>);<br>        f(<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>);<br>        System.out.println(<span class="hljs-number">1</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-
-
-
-
-<p><em>为什么java不通过返回值区分重载方法，而是方法名？</em></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 参考如下代码</span><br><span class="hljs-comment">// 而f函数可能有很多种实现方式，编译器并不能知道你究竟要调哪一个</span><br>f();<br></code></pre></td></tr></table></figure>
-
-<h2 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h2><p>方法名、参数、返回值相同。</p>
-<p>子类方法不能缩小父类方法的访问权限。</p>
-<p>子类方法不能抛出比父类方法更多的异常(但子类方法可以不抛出异常)。</p>
-<p>存在于父类和子类之间。 方法被定义为 final 不能被重写。  </p>
-
+<h3 id="registerNatives"><a href="#registerNatives" class="headerlink" title="registerNatives"></a>registerNatives</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">native</span> <span class="hljs-keyword">void</span> <span class="hljs-title">registerNatives</span><span class="hljs-params">()</span></span>;<br><br><span class="hljs-keyword">static</span> &#123;<br>    registerNatives();<br>&#125;<br><br></code></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>
@@ -364,18 +347,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/12/java/04_String/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Java String</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/07/java/03_%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B/">
-                        <span class="hidden-mobile">Java变量类型</span>
+                      <a href="/2021/04/19/project/io-ui/00_%E4%BB%8B%E7%BB%8D/">
+                        <span class="hidden-mobile">ioui-介绍</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
