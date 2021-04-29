@@ -257,7 +257,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 天前
+                  本文最后更新于：3 天前
                 
               </p>
             
@@ -265,13 +265,11 @@
               <div class="note note-success">
             <p><strong>项目地址</strong> <a target="_blank" rel="noopener" href="https://github.com/sandorZHAO/noteFx">https://github.com/sandorZHAO/noteFx</a></p>
           </div>
-
 <h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><p><a target="_blank" rel="noopener" href="https://exe4j.apponic.com/">exe4j_v6.0.1</a></p>
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p><img src="/img/project/noteFx/02-00-exe4j.png" srcset="/img/loading.gif" lazyload alt="打包exe-1"><br><img src="/img/project/noteFx/02-01-exe4j.png" srcset="/img/loading.gif" lazyload alt="打包exe-2"><br><img src="/img/project/noteFx/02-02-exe4j.png" srcset="/img/loading.gif" lazyload alt="打包exe-3"><br><img src="/img/project/noteFx/02-03-exe4j.png" srcset="/img/loading.gif" lazyload alt="打包exe-4"><br><img src="/img/project/noteFx/02-04-exe4j.png" srcset="/img/loading.gif" lazyload alt="打包exe-5"><br><img src="/img/project/noteFx/02-05-exe4j.png" srcset="/img/loading.gif" lazyload alt="打包exe-6"><br><img src="/img/project/noteFx/02-06-exe4j.png" srcset="/img/loading.gif" lazyload alt="打包exe-7"><br><img src="/img/project/noteFx/02-07-exe4j.png" srcset="/img/loading.gif" lazyload alt="打包exe-8"><br><img src="/img/project/noteFx/02-08-exe4j.png" srcset="/img/loading.gif" lazyload alt="打包exe-9"></p>
 <h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p>当然你现在是打不开的,因为目前使用的是./miniJre目录那么当前是找不到这个依赖的</p>
 <h2 id="精简jre"><a href="#精简jre" class="headerlink" title="精简jre"></a>精简jre</h2><p>到对应的java 11 安装目录下执行以下脚本,进行<strong>精简jre</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./bin/jlink.exe  --strip-debug --compress 1 --no-header-files --no-man-pages --output miniJre --add-modules java.base,jdk.unsupported,java.desktop,java.scripting<br></code></pre></td></tr></table></figure>
-
 <p>将<code>java.base</code>,<code>jdk.unsupported</code>,<code>java.desktop</code>,<code>java.scripting</code>模块导出形成miniJre,并且将miniJar和刚才打包出来的exe放到同一目录下,这时候打开对应exe文件就可以查看效果了</p>
 <p><img src="/img/project/noteFx/02-09-result.png" srcset="/img/loading.gif" lazyload alt="效果"></p>
 

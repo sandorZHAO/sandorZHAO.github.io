@@ -257,7 +257,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：6 分钟前
+                  本文最后更新于：1 天前
                 
               </p>
             
@@ -266,43 +266,43 @@
 <p>使用外挂 JIT，性能差</p>
 <h2 id="JDK-Version-1-1"><a href="#JDK-Version-1-1" class="headerlink" title="JDK Version 1.1"></a>JDK Version 1.1</h2><p>1997-02-19</p>
 <ul>
-<li>  JDBC</li>
-<li>  支持内部类</li>
-<li>  RMI 远程方法调用</li>
-<li>  反射</li>
-<li>  JavaBean</li>
+<li>JDBC</li>
+<li>支持内部类</li>
+<li>RMI 远程方法调用</li>
+<li>反射</li>
+<li>JavaBean</li>
 </ul>
 <h2 id="JDK-Version-1-2"><a href="#JDK-Version-1-2" class="headerlink" title="JDK Version 1.2"></a>JDK Version 1.2</h2><p>1998-12-08</p>
 <ul>
-<li>  集合框架</li>
-<li>  JIT 编译器</li>
-<li>  对打包的 Java 文件进行数字签名</li>
-<li>  JFC，包括 Swing 1.9，拖放和 Java2D 类库</li>
-<li>  Java 插件</li>
-<li>  JDBC 引入可滚动结果集，BLOB，CLOB，批量更新和用户自定义类型</li>
-<li>  Applet 添加声音支持</li>
-<li>  同时发布了 JSP/Servlet、EJB 规范，将 java 分成 J2EE，J2SE 和 J2ME</li>
+<li>集合框架</li>
+<li>JIT 编译器</li>
+<li>对打包的 Java 文件进行数字签名</li>
+<li>JFC，包括 Swing 1.9，拖放和 Java2D 类库</li>
+<li>Java 插件</li>
+<li>JDBC 引入可滚动结果集，BLOB，CLOB，批量更新和用户自定义类型</li>
+<li>Applet 添加声音支持</li>
+<li>同时发布了 JSP/Servlet、EJB 规范，将 java 分成 J2EE，J2SE 和 J2ME</li>
 </ul>
 <h2 id="JDK-Version-1-3"><a href="#JDK-Version-1-3" class="headerlink" title="JDK Version 1.3"></a>JDK Version 1.3</h2><p>2000-05-08 红隼</p>
 <ul>
-<li>  Java Sound API</li>
-<li>  jar 文件索引</li>
-<li>  对 Java 的各个方面都做了大量优化和增强</li>
-<li>  Hotspot 成为 Java 默认虚拟机</li>
+<li>Java Sound API</li>
+<li>jar 文件索引</li>
+<li>对 Java 的各个方面都做了大量优化和增强</li>
+<li>Hotspot 成为 Java 默认虚拟机</li>
 </ul>
 <h2 id="JDK-Version-1-4"><a href="#JDK-Version-1-4" class="headerlink" title="JDK Version 1.4"></a>JDK Version 1.4</h2><p>2002-02-13 隼</p>
 <ul>
-<li>  断言</li>
-<li>  XML 处理</li>
-<li>  Java 打印服务</li>
-<li>  Logging API</li>
-<li>  Java Web Start</li>
-<li>  JDBC 3.0 API</li>
-<li>  链式异常处理</li>
-<li>  支持 IPV6</li>
-<li>  支持正则</li>
-<li>  引入 Image I/O API</li>
-<li>  Classic 虚拟机退出</li>
+<li>断言</li>
+<li>XML 处理</li>
+<li>Java 打印服务</li>
+<li>Logging API</li>
+<li>Java Web Start</li>
+<li>JDBC 3.0 API</li>
+<li>链式异常处理</li>
+<li>支持 IPV6</li>
+<li>支持正则</li>
+<li>引入 Image I/O API</li>
+<li>Classic 虚拟机退出</li>
 </ul>
 <h2 id="JDK-5"><a href="#JDK-5" class="headerlink" title="JDK 5"></a>JDK 5</h2><p>2004-09-30 老虎 改名为 J2SE5.0</p>
 <ul>
@@ -315,161 +315,167 @@
 </ol>
 </li>
 <li><p>泛型</p>
-<p>  <code>ArrayList list=new ArrayList()</code></p>
-<p>  <code>ArrayList&lt;Integer&gt;list=new ArrayList&lt;Integer&gt;();</code></p>
-<p>  避免了程序员自行保证集合容器中存取数据的强制转换</p>
+<p><code>ArrayList list=new ArrayList()</code></p>
+<p><code>ArrayList&lt;Integer&gt;list=new ArrayList&lt;Integer&gt;();</code></p>
+<p>避免了程序员自行保证集合容器中存取数据的强制转换</p>
 </li>
 <li><p>自动装箱与拆箱</p>
-<p>  int&gt;&gt;Integer<br>  Integer&gt;&gt;int</p>
+<p>int&gt;&gt;Integer<br>Integer&gt;&gt;int</p>
 </li>
-<li><p>  元数据（注解）</p>
+<li><p>元数据（注解）</p>
 </li>
-<li><p>  增强循环 foreach</p>
+<li><p>增强循环 foreach</p>
 </li>
 <li><p>可变参数</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">f</span><span class="hljs-params">(Object... obj)</span></span>&#123;<br><br>&#125;<br></code></pre></td></tr></table></figure></li>
-<li><p>静态引入</p>
-<p>  <code>import start **.**</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">f</span><span class="hljs-params">(Object... obj)</span></span>&#123;<br><br>&#125;<br></code></pre></td></tr></table></figure>
 </li>
-<li><p>  Instrumentation</p>
+<li><p>静态引入</p>
+<p><code>import start **.**</code></p>
+</li>
+<li><p>Instrumentation</p>
 </li>
 </ul>
 <h2 id="JDK-6"><a href="#JDK-6" class="headerlink" title="JDK 6"></a>JDK 6</h2><p>2006-12-11 野马</p>
 <ul>
-<li>  支持脚本语言</li>
-<li>  JDBC 4.0 API</li>
-<li>  Java Compiler API</li>
-<li>  可插拔注解</li>
-<li>  增加对 Native PKI、Java GSS、Kerberos 和 LDAP 支持</li>
-<li>  集成 WebServices</li>
+<li>支持脚本语言</li>
+<li>JDBC 4.0 API</li>
+<li>Java Compiler API</li>
+<li>可插拔注解</li>
+<li>增加对 Native PKI、Java GSS、Kerberos 和 LDAP 支持</li>
+<li>集成 WebServices</li>
 </ul>
 <h2 id="JDK-7"><a href="#JDK-7" class="headerlink" title="JDK 7"></a>JDK 7</h2><p>2011-07-28 海豚</p>
 <ul>
-<li>  钻石型语法（在创建泛型对象时应用类型推断）</li>
-<li>  支持 try-with-resources（在一个语句块中捕获多种异常）</li>
-<li>  switch 语句块中允许以字符串作为分支条件</li>
-<li>  引入 Java NIO.2 开发包</li>
-<li>  在创建泛型对象时应用类型推断</li>
-<li>  支持动态语言</li>
-<li>  数值类型可以用二进制字符串标识，并且可以在字符串表示中添加下划线</li>
-<li>  null 值的自动处理</li>
-<li>  采用 G1 垃圾回收器，支持 64 为系统的压缩指针</li>
+<li>钻石型语法（在创建泛型对象时应用类型推断）</li>
+<li>支持 try-with-resources（在一个语句块中捕获多种异常）</li>
+<li>switch 语句块中允许以字符串作为分支条件</li>
+<li>引入 Java NIO.2 开发包</li>
+<li>在创建泛型对象时应用类型推断</li>
+<li>支持动态语言</li>
+<li>数值类型可以用二进制字符串标识，并且可以在字符串表示中添加下划线</li>
+<li>null 值的自动处理</li>
+<li>采用 G1 垃圾回收器，支持 64 为系统的压缩指针</li>
 </ul>
 <h2 id="JDK8"><a href="#JDK8" class="headerlink" title="JDK8"></a>JDK8</h2><p>2014-03-18</p>
 <ul>
 <li><p>lambda</p>
-<p>  作为接口的实例</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 无参数，无返回值</span><br>Runnable r = () -&gt; System.out.println(<span class="hljs-string">&quot;hello&quot;</span>);<br><span class="hljs-comment">// 需要一个参数，无返回值</span><br>Consumer&lt;String&gt; con = (String str) -&gt; &#123;<br>    System.out.println(str);<br>&#125;<br><span class="hljs-comment">// 数据类型可省略,类型推断</span><br>Consumer&lt;String&gt; con = (str) -&gt; &#123;<br>    System.out.println(str);<br>&#125;<br><span class="hljs-comment">// 如果只需要一个参数，参数的小括号可以省略</span><br>Consumer&lt;String&gt; con = str -&gt; &#123;<br>    System.out.println(str);<br>&#125;<br><span class="hljs-comment">// lambda需要两个或者两个以上的参数，多条执行语句，并且可以有返回值</span><br>Comparator&lt;Integer&gt; com = (o1, o2)-&gt; &#123;<br>    <span class="hljs-keyword">return</span> Integer.compare(o1, o2);<br>&#125;<br><span class="hljs-comment">//如果lambda只有一条语句，return和大括号可以省略</span><br>Comparator&lt;Integer&gt; com = (o1, o2)-&gt; Integer.compare(o1, o2);<br></code></pre></td></tr></table></figure></li>
+<p>作为接口的实例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 无参数，无返回值</span><br>Runnable r = () -&gt; System.out.println(<span class="hljs-string">&quot;hello&quot;</span>);<br><span class="hljs-comment">// 需要一个参数，无返回值</span><br>Consumer&lt;String&gt; con = (String str) -&gt; &#123;<br>    System.out.println(str);<br>&#125;<br><span class="hljs-comment">// 数据类型可省略,类型推断</span><br>Consumer&lt;String&gt; con = (str) -&gt; &#123;<br>    System.out.println(str);<br>&#125;<br><span class="hljs-comment">// 如果只需要一个参数，参数的小括号可以省略</span><br>Consumer&lt;String&gt; con = str -&gt; &#123;<br>    System.out.println(str);<br>&#125;<br><span class="hljs-comment">// lambda需要两个或者两个以上的参数，多条执行语句，并且可以有返回值</span><br>Comparator&lt;Integer&gt; com = (o1, o2)-&gt; &#123;<br>    <span class="hljs-keyword">return</span> Integer.compare(o1, o2);<br>&#125;<br><span class="hljs-comment">//如果lambda只有一条语句，return和大括号可以省略</span><br>Comparator&lt;Integer&gt; com = (o1, o2)-&gt; Integer.compare(o1, o2);<br></code></pre></td></tr></table></figure>
+</li>
 <li><p>函数式接口</p>
-<p>  如果一个接口中，只声明了一个抽象方法，则此接口就称为函数式接口</p>
-<p>  可以加<code>@FunctionalInterface</code>，但不加也可以</p>
-<p>  OOF 编程</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function">Consumer&lt;T&gt; <span class="hljs-keyword">void</span> <span class="hljs-title">accept</span><span class="hljs-params">(T t)</span></span>;<br><span class="hljs-function">Supplier&lt;T&gt; T <span class="hljs-title">get</span><span class="hljs-params">()</span></span>;<br><span class="hljs-function">Function&lt;T,R&gt; R <span class="hljs-title">apply</span><span class="hljs-params">(T r)</span></span>;<br><span class="hljs-function">Predicate&lt;T&gt; <span class="hljs-keyword">boolean</span> <span class="hljs-title">test</span><span class="hljs-params">(T t)</span></span>;<br></code></pre></td></tr></table></figure></li>
+<p>如果一个接口中，只声明了一个抽象方法，则此接口就称为函数式接口</p>
+<p>可以加<code>@FunctionalInterface</code>，但不加也可以</p>
+<p>OOF 编程</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function">Consumer&lt;T&gt; <span class="hljs-keyword">void</span> <span class="hljs-title">accept</span><span class="hljs-params">(T t)</span></span>;<br><span class="hljs-function">Supplier&lt;T&gt; T <span class="hljs-title">get</span><span class="hljs-params">()</span></span>;<br><span class="hljs-function">Function&lt;T,R&gt; R <span class="hljs-title">apply</span><span class="hljs-params">(T r)</span></span>;<br><span class="hljs-function">Predicate&lt;T&gt; <span class="hljs-keyword">boolean</span> <span class="hljs-title">test</span><span class="hljs-params">(T t)</span></span>;<br></code></pre></td></tr></table></figure>
+</li>
 <li><p>Stream API</p>
-<p>  操作数据源所生成的元素序列，不会存储元素，不会改变源对象，操作是延迟执行的。</p>
+<p>操作数据源所生成的元素序列，不会存储元素，不会改变源对象，操作是延迟执行的。</p>
 <ol>
 <li>创建 stream</li>
 <li>中间操作</li>
 <li>终止操作 一旦执行，就执行中间操作，并且产生结果</li>
 </ol>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 创建Stream</span><br><span class="hljs-comment">// 创建方式1：通过集合</span><br>List&lt;Person&gt; persons = PersonService.getPersons();<br><span class="hljs-comment">// 返回顺序流</span><br>Stream&lt;Person&gt; stream = employees.stream();<br><span class="hljs-comment">// 返回一个并行流</span><br>Stream&lt;Person&gt; parallelStream = employees.parallelStream();<br><br><span class="hljs-comment">// 创建方式2：通过数组</span><br><span class="hljs-keyword">int</span>[] arr = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>&#125;<br>IntStream stream = Arrays.stream(arr);<br><br><span class="hljs-comment">// 创建方式3：通过Stream的of()</span><br>Stream&lt;Integer&gt; stream = Stream.of(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>);<br><br><span class="hljs-comment">// 创建方式4：创建无限流</span><br>Stream.iterate(<span class="hljs-number">0</span>, t -&gt; t+<span class="hljs-number">2</span>).limit(<span class="hljs-number">10</span>).forEach(System.out::println);<br>Stream.generate(Math::random).limit(<span class="hljs-number">10</span>).forEach(System.out::println);<br></code></pre></td></tr></table></figure>
-
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 中间操作</span><br><span class="hljs-comment">// 筛选与切片</span><br>List&lt;Person&gt; persons = PersonService.getPersons();<br>list.stream().filter(e -&gt; e.getSalary() &gt; <span class="hljs-number">7000</span>).forEach(System.out::println);<br><span class="hljs-comment">// 截断流，数目不超过给定数量</span><br>limit(n);<br><span class="hljs-comment">// 跳过元素，返回一个扔掉前n个元素的流</span><br>skip(n);<br><span class="hljs-comment">// 筛选，通过流所生成元素的hashCode 和equals 去重</span><br>distinct();<br><span class="hljs-comment">// 映射</span><br><span class="hljs-comment">// 接受一个函数作为参数，将元素转换成其他形式或者提取信息</span><br>map(Function f);<br><span class="hljs-comment">// 接受一个函数作为参数，将流中的每个值都换成另一个流，然后将所有流连成一个流</span><br>flatMap(Function f);<br><span class="hljs-comment">// 排序</span><br>sorted();<br>sorted(Comparator com);<br></code></pre></td></tr></table></figure>
-
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 终止操作</span><br><span class="hljs-comment">// 匹配与查找</span><br><span class="hljs-comment">// 检查是否匹配所有元素</span><br>allMatch(Predicate p);<br><span class="hljs-comment">// 检查是否至少匹配一个元素</span><br>anyMatch(Predicate p);<br><span class="hljs-comment">// 检查是否没有匹配的元素</span><br>noneMatch(Predicate p);<br><span class="hljs-comment">// 返回第一个元素</span><br>findFirst();<br><span class="hljs-comment">// 返回当前流中任意元素</span><br>findAny();<br><span class="hljs-comment">// 返回流中元素的总个数</span><br>count();<br><span class="hljs-comment">// 返回流中最大值</span><br>max(Comparator c);<br><span class="hljs-comment">// 返回流中最小值</span><br>min(Comparator c);<br><span class="hljs-comment">// 迭代</span><br>forEach(Comsumer c);<br><br><span class="hljs-comment">// 归约</span><br><span class="hljs-comment">// 可以将流中元素反复结合起来，得到一个值</span><br>reduce(T identity, BinaryOperator);<br><span class="hljs-comment">// 可以将流中元素反复结合起来，得到一个值，返回Optional&lt;T&gt;</span><br>reduce(BinaryOperator);<br><br><span class="hljs-comment">// 收集</span><br><span class="hljs-comment">// 将流转换为其他形式，接受一个Colletor接口的实现，汇总</span><br>collec(Collector c);<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 创建Stream</span><br><span class="hljs-comment">// 创建方式1：通过集合</span><br>List&lt;Person&gt; persons = PersonService.getPersons();<br><span class="hljs-comment">// 返回顺序流</span><br>Stream&lt;Person&gt; stream = employees.stream();<br><span class="hljs-comment">// 返回一个并行流</span><br>Stream&lt;Person&gt; parallelStream = employees.parallelStream();<br><br><span class="hljs-comment">// 创建方式2：通过数组</span><br><span class="hljs-keyword">int</span>[] arr = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>&#125;<br>IntStream stream = Arrays.stream(arr);<br><br><span class="hljs-comment">// 创建方式3：通过Stream的of()</span><br>Stream&lt;Integer&gt; stream = Stream.of(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>);<br><br><span class="hljs-comment">// 创建方式4：创建无限流</span><br>Stream.iterate(<span class="hljs-number">0</span>, t -&gt; t+<span class="hljs-number">2</span>).limit(<span class="hljs-number">10</span>).forEach(System.out::println);<br>Stream.generate(Math::random).limit(<span class="hljs-number">10</span>).forEach(System.out::println);<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 中间操作</span><br><span class="hljs-comment">// 筛选与切片</span><br>List&lt;Person&gt; persons = PersonService.getPersons();<br>list.stream().filter(e -&gt; e.getSalary() &gt; <span class="hljs-number">7000</span>).forEach(System.out::println);<br><span class="hljs-comment">// 截断流，数目不超过给定数量</span><br>limit(n);<br><span class="hljs-comment">// 跳过元素，返回一个扔掉前n个元素的流</span><br>skip(n);<br><span class="hljs-comment">// 筛选，通过流所生成元素的hashCode 和equals 去重</span><br>distinct();<br><span class="hljs-comment">// 映射</span><br><span class="hljs-comment">// 接受一个函数作为参数，将元素转换成其他形式或者提取信息</span><br>map(Function f);<br><span class="hljs-comment">// 接受一个函数作为参数，将流中的每个值都换成另一个流，然后将所有流连成一个流</span><br>flatMap(Function f);<br><span class="hljs-comment">// 排序</span><br>sorted();<br>sorted(Comparator com);<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 终止操作</span><br><span class="hljs-comment">// 匹配与查找</span><br><span class="hljs-comment">// 检查是否匹配所有元素</span><br>allMatch(Predicate p);<br><span class="hljs-comment">// 检查是否至少匹配一个元素</span><br>anyMatch(Predicate p);<br><span class="hljs-comment">// 检查是否没有匹配的元素</span><br>noneMatch(Predicate p);<br><span class="hljs-comment">// 返回第一个元素</span><br>findFirst();<br><span class="hljs-comment">// 返回当前流中任意元素</span><br>findAny();<br><span class="hljs-comment">// 返回流中元素的总个数</span><br>count();<br><span class="hljs-comment">// 返回流中最大值</span><br>max(Comparator c);<br><span class="hljs-comment">// 返回流中最小值</span><br>min(Comparator c);<br><span class="hljs-comment">// 迭代</span><br>forEach(Comsumer c);<br><br><span class="hljs-comment">// 归约</span><br><span class="hljs-comment">// 可以将流中元素反复结合起来，得到一个值</span><br>reduce(T identity, BinaryOperator);<br><span class="hljs-comment">// 可以将流中元素反复结合起来，得到一个值，返回Optional&lt;T&gt;</span><br>reduce(BinaryOperator);<br><br><span class="hljs-comment">// 收集</span><br><span class="hljs-comment">// 将流转换为其他形式，接受一个Colletor接口的实现，汇总</span><br>collec(Collector c);<br></code></pre></td></tr></table></figure>
+</li>
 <li><p>方法引用和构造器引用</p>
-<p>  当要传递给 Lambda 体的操作，已经有实现的方法了，可以使用方法引用</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 类(或者对象)::方法名</span><br>PrintStream ps = System.out;<br>Consumer&lt;String&gt; con2 = ps::println;<br>con2.accept(<span class="hljs-string">&quot;hello&quot;</span>);<br></code></pre></td></tr></table></figure></li>
-<li><p>  默认方法 在接口里有一个实现的方法</p>
+<p>当要传递给 Lambda 体的操作，已经有实现的方法了，可以使用方法引用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 类(或者对象)::方法名</span><br>PrintStream ps = System.out;<br>Consumer&lt;String&gt; con2 = ps::println;<br>con2.accept(<span class="hljs-string">&quot;hello&quot;</span>);<br></code></pre></td></tr></table></figure>
 </li>
-<li><p>  新工具 nashorn 引擎、类依赖分析器 jdeps</p>
+<li><p>默认方法 在接口里有一个实现的方法</p>
 </li>
-<li><p>  Date Time API</p>
+<li><p>新工具 nashorn 引擎、类依赖分析器 jdeps</p>
+</li>
+<li><p>Date Time API</p>
 </li>
 <li><p>Optional 类，解决空指针异常</p>
-<p>  Optional&lt;T&gt;是一个容器类，他可以保存类型 T 的值，代表这个值存在，或者保存 null，标识这个值不存在。</p>
+<p>Optional\<T\>是一个容器类，他可以保存类型 T 的值，代表这个值存在，或者保存 null，标识这个值不存在。</p>
 </li>
 </ul>
 <h2 id="JDK-9"><a href="#JDK-9" class="headerlink" title="JDK 9"></a>JDK 9</h2><p>2017-09-22</p>
 <ul>
-<li><p>  模块化系统 jigsaw（module requires）</p>
+<li><p>模块化系统 jigsaw（module requires）</p>
 </li>
-<li><p>  REPL：交互式编程环境</p>
+<li><p>REPL：交互式编程环境</p>
 </li>
-<li><p>  多版本兼容 JAR</p>
+<li><p>多版本兼容 JAR</p>
 </li>
-<li><p>  私有接口方法，连方法的访问权限修饰符都可以声明为 private</p>
+<li><p>私有接口方法，连方法的访问权限修饰符都可以声明为 private</p>
 </li>
-<li><p>  钻石操作符的使用升级 （泛型+匿名内部类）</p>
+<li><p>钻石操作符的使用升级 （泛型+匿名内部类）</p>
 </li>
 <li><p>语法改进 try，自动关闭连接</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 8</span><br><br><span class="hljs-keyword">try</span>(InputStreamReader reader = <span class="hljs-keyword">new</span> InputStreamReader(System.in))&#123;<br>	....<br>&#125;<br><span class="hljs-comment">// 9</span><br>InputStreamReader reader = <span class="hljs-keyword">new</span> InputStreamReader(System.in);<br><span class="hljs-keyword">try</span>(reader)&#123;<br>	....<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 8</span><br><br><span class="hljs-keyword">try</span>(InputStreamReader reader = <span class="hljs-keyword">new</span> InputStreamReader(System.in))&#123;<br>	....<br>&#125;<br><span class="hljs-comment">// 9</span><br>InputStreamReader reader = <span class="hljs-keyword">new</span> InputStreamReader(System.in);<br><span class="hljs-keyword">try</span>(reader)&#123;<br>	....<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
 <li><p>String 存储结构变更(AbstractStringBuilder 都修改了)</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Stable</span><br><span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">byte</span>[] value;<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Stable</span><br><span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">byte</span>[] value;<br></code></pre></td></tr></table></figure>
+</li>
 <li><p>便利的集合特性 of()</p>
-<p>  创建只读集合</p>
+<p>创建只读集合</p>
 </li>
 <li><p>增强的 InputStreamAPI</p>
-<p>  transferTo，将数据直接传输给 OutputStream</p>
+<p>transferTo，将数据直接传输给 OutputStream</p>
 </li>
 <li><p>增强的 StreamAPI</p>
-<p>  takeWhile 返回从开头开始的尽可能多的数据</p>
-<p>  dropWhile 与 takeWhile 相反，返回剩余元素</p>
-<p>  ofNullable，形参变量是可以为 null 的单个元素</p>
-<p>  iterate 的新重载，</p>
+<p>takeWhile 返回从开头开始的尽可能多的数据</p>
+<p>dropWhile 与 takeWhile 相反，返回剩余元素</p>
+<p>ofNullable，形参变量是可以为 null 的单个元素</p>
+<p>iterate 的新重载，</p>
 </li>
-<li><p>  Optional 中 stream 的方法</p>
+<li><p>Optional 中 stream 的方法</p>
 </li>
-<li><p>  全新的 HTTP 客户端 API</p>
+<li><p>全新的 HTTP 客户端 API</p>
 </li>
-<li><p>  Deprecated 的相关 API</p>
+<li><p>Deprecated 的相关 API</p>
 </li>
-<li><p>  javadoc 的 h5 支持</p>
+<li><p>javadoc 的 h5 支持</p>
 </li>
-<li><p>  js 引擎升级 Nashorn</p>
+<li><p>js 引擎升级 Nashorn</p>
 </li>
-<li><p>  java 的动态编译器</p>
+<li><p>java 的动态编译器</p>
 </li>
 </ul>
 <h2 id="JDK-10"><a href="#JDK-10" class="headerlink" title="JDK 10"></a>JDK 10</h2><p>2018-03-21</p>
 <ul>
-<li>  var 局部变量类型推断</li>
-<li>  将原来 mercurial 管理的众多 JDK 仓库代码合并</li>
-<li>  统一的垃圾回收接口</li>
-<li>  G1 垃圾回收器的并行完整垃圾回收</li>
-<li>  集合新增 copyOf()，用于创建一个只读的集合</li>
+<li>var 局部变量类型推断</li>
+<li>将原来 mercurial 管理的众多 JDK 仓库代码合并</li>
+<li>统一的垃圾回收接口</li>
+<li>G1 垃圾回收器的并行完整垃圾回收</li>
+<li>集合新增 copyOf()，用于创建一个只读的集合</li>
 </ul>
 <h2 id="JDK-11"><a href="#JDK-11" class="headerlink" title="JDK 11"></a>JDK 11</h2><ul>
-<li><p>  基于嵌套的访问控制</p>
+<li><p>基于嵌套的访问控制</p>
 </li>
-<li><p>  动态的类文件常量</p>
+<li><p>动态的类文件常量</p>
 </li>
-<li><p>  Epsilon 垃圾回收器</p>
+<li><p>Epsilon 垃圾回收器</p>
 </li>
 <li><p>ZGC 垃圾回收器 可伸缩的低延时垃圾回收器</p>
-<p>  并发，基于 region，压缩型的垃圾收集器，只有 root 扫描会 stw，因此 GC 停顿时间不会随着堆的增长和存货对象的增长而增长。</p>
+<p>并发，基于 region，压缩型的垃圾收集器，只有 root 扫描会 stw，因此 GC 停顿时间不会随着堆的增长和存货对象的增长而增长。</p>
 <ul>
 <li>优势<ul>
-<li>  GC 暂停时间不超过 10ms</li>
-<li>  可处理几百兆的小堆，也能处理几 T 的大堆</li>
-<li>  和 G1 相比，应用吞吐能力不会下降超过 15%</li>
-<li>  为未来的 GC 功能和利用 colord 指针以及 Load barriers 优化奠定基础</li>
-<li>  初始只支持 64 位系统</li>
+<li>GC 暂停时间不超过 10ms</li>
+<li>可处理几百兆的小堆，也能处理几 T 的大堆</li>
+<li>和 G1 相比，应用吞吐能力不会下降超过 15%</li>
+<li>为未来的 GC 功能和利用 colord 指针以及 Load barriers 优化奠定基础</li>
+<li>初始只支持 64 位系统</li>
 </ul>
 </li>
 </ul>
 </li>
 <li><p>字符串新方法</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 判断字符串是否为空白</span><br><span class="hljs-string">&quot; &quot;</span>.isBlank();<br><span class="hljs-comment">// 去除首尾空白</span><br><span class="hljs-string">&quot; Javastack &quot;</span>.strip();<br><span class="hljs-comment">// 去除尾部空格</span><br><span class="hljs-string">&quot; Javastack &quot;</span>.stripTrailing();<br><span class="hljs-comment">// 去除首部空格</span><br><span class="hljs-string">&quot; Javastack &quot;</span>.stripLeading();<br><span class="hljs-comment">// 复制字符串</span><br><span class="hljs-string">&quot;Java&quot;</span>.repeat(<span class="hljs-number">3</span>);<br><span class="hljs-comment">// 行数统计</span><br><span class="hljs-string">&quot;A\nB\nC&quot;</span>.lines().count();<br></code></pre></td></tr></table></figure></li>
-<li><p>  Optional 加强</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 判断字符串是否为空白</span><br><span class="hljs-string">&quot; &quot;</span>.isBlank();<br><span class="hljs-comment">// 去除首尾空白</span><br><span class="hljs-string">&quot; Javastack &quot;</span>.strip();<br><span class="hljs-comment">// 去除尾部空格</span><br><span class="hljs-string">&quot; Javastack &quot;</span>.stripTrailing();<br><span class="hljs-comment">// 去除首部空格</span><br><span class="hljs-string">&quot; Javastack &quot;</span>.stripLeading();<br><span class="hljs-comment">// 复制字符串</span><br><span class="hljs-string">&quot;Java&quot;</span>.repeat(<span class="hljs-number">3</span>);<br><span class="hljs-comment">// 行数统计</span><br><span class="hljs-string">&quot;A\nB\nC&quot;</span>.lines().count();<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>Optional 加强</p>
 </li>
 <li><p>局部变量类型推断升级</p>
-<p>  在使用 lambda 表达式时给参数加上注解</p>
+<p>在使用 lambda 表达式时给参数加上注解</p>
 </li>
 <li><p>简化的编译运行程序</p>
-<p>  java test.java 即可</p>
+<p>java test.java 即可</p>
 </li>
-<li><p>  废弃 Nashorn 引擎</p>
+<li><p>废弃 Nashorn 引擎</p>
 </li>
 </ul>
 <h2 id="JDK-12"><a href="#JDK-12" class="headerlink" title="JDK 12"></a>JDK 12</h2><ul>
@@ -501,45 +507,45 @@
 <li>匹配自上而下，忘记 break，会执行其他 case 中的语句</li>
 <li>所有 case 共有一个块范围</li>
 <li>不能在一个 case 中写多个执行结果一致的条件</li>
-<li>整个 switch 不能作为返回值</li>
+<li><p>整个 switch 不能作为返回值</p>
+<p>预览版解决了以上所有问题</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java">numberOfLetters = <span class="hljs-keyword">switch</span>(fruit)&#123;<br>    <span class="hljs-keyword">case</span> PEAR -&gt; <span class="hljs-number">4</span>;<br>    <span class="hljs-keyword">case</span> APPLE, GRAPE, MANGO -&gt; <span class="hljs-number">5</span>;<br>    <span class="hljs-keyword">case</span> ORANGE, PAPAYA -&gt; <span class="hljs-number">6</span>;<br>    <span class="hljs-keyword">default</span> -&gt; <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalStateException(<span class="hljs-string">&quot;No Such Fruit&quot;</span> + fruit);<br>&#125;<br>System.out.println(numberOfLetters)<br></code></pre></td></tr></table></figure>
+<p>需要注意的是 Java11 以前的版本中，Switch 支持：byte、char、short、int、Byte、Character、Short、Integer、enum、String，而不支持 float、double 和 long</p>
+</li>
 </ol>
-<p>  预览版解决了以上所有问题</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java">numberOfLetters = <span class="hljs-keyword">switch</span>(fruit)&#123;<br>    <span class="hljs-keyword">case</span> PEAR -&gt; <span class="hljs-number">4</span>;<br>    <span class="hljs-keyword">case</span> APPLE, GRAPE, MANGO -&gt; <span class="hljs-number">5</span>;<br>    <span class="hljs-keyword">case</span> ORANGE, PAPAYA -&gt; <span class="hljs-number">6</span>;<br>    <span class="hljs-keyword">default</span> -&gt; <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalStateException(<span class="hljs-string">&quot;No Such Fruit&quot;</span> + fruit);<br>&#125;<br>System.out.println(numberOfLetters)<br></code></pre></td></tr></table></figure>
-
-<p>  需要注意的是 Java11 以前的版本中，Switch 支持：byte、char、short、int、Byte、Character、Short、Integer、enum、String，而不支持 float、double 和 long</p>
 </li>
 <li><p>JEP334：JVM 常量 API</p>
 <p>  更容易地对关键类文件和运行时构建的名义描述进行建模，特别是对那些从常量池加载的常量。</p>
 <p>  具体来说，java.base 模块新增了 java.lang.constant 包，定义了一系列基于值的符号引用，它们能够描述每种可加载常量。</p>
 </li>
 <li><p>JEP340：只保留一个 AArch64 实现</p>
-<p>  11 之前存在两个 64 位 ARM 端口</p>
+<p>11 之前存在两个 64 位 ARM 端口</p>
 </li>
 <li><p>JEP341：默认生成类数据共享 CDS 归档文件</p>
-<p>  CDS：在多个 JVM 之间共享一些类</p>
-<p>  jdk5 引入了 cds，jdk9 扩展，jdk10 扩展至 appcds</p>
+<p>CDS：在多个 JVM 之间共享一些类</p>
+<p>jdk5 引入了 cds，jdk9 扩展，jdk10 扩展至 appcds</p>
 </li>
 <li><p>JEP344：可终止的 G1 Mixed GC</p>
-<p>  当 G1 垃圾回收器的回收超过暂停事件的目标，则终止垃圾回收过程，为了满足用户设置的预期的 JVM 停顿时间。</p>
+<p>当 G1 垃圾回收器的回收超过暂停事件的目标，则终止垃圾回收过程，为了满足用户设置的预期的 JVM 停顿时间。</p>
 </li>
 <li><p>JEP346：G1 及时返回未使用的已分配内存</p>
-<p>  G1 垃圾收集器在应用程序不活动期间定期生成或持续循环检查整体 Java 堆使用情况，以便 G1 垃圾收集器能够更及时的将 Java 堆中不使用内存部分返回操作系统。</p>
+<p>G1 垃圾收集器在应用程序不活动期间定期生成或持续循环检查整体 Java 堆使用情况，以便 G1 垃圾收集器能够更及时的将 Java 堆中不使用内存部分返回操作系统。</p>
 </li>
-<li><p>  支持 Unicode 11</p>
+<li><p>支持 Unicode 11</p>
 </li>
-<li><p>  支持压缩数字格式化</p>
+<li><p>支持压缩数字格式化</p>
 </li>
 </ul>
 <figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mathematica"><span class="hljs-built_in">NumberFormat</span><span class="hljs-operator">.</span><span class="hljs-variable">getCompactNumberInstance</span><span class="hljs-punctuation">(</span><span class="hljs-variable">Local</span><span class="hljs-operator">.</span><span class="hljs-variable">US</span><span class="hljs-operator">,</span> <span class="hljs-built_in">NumberFormat</span><span class="hljs-operator">.</span><span class="hljs-built_in">Style</span><span class="hljs-operator">.</span><span class="hljs-variable">SHORT</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
-
 <ul>
 <li><p>string 新增方法</p>
-<p>  jdk6 字符串常量池，方法区</p>
-<p>  jdk7 堆空间</p>
-<p>  jdk9 底层 char[] -&gt; byte[] 字符编码集</p>
+<p>jdk6 字符串常量池，方法区</p>
+<p>jdk7 堆空间</p>
+<p>jdk9 底层 char[] -&gt; byte[] 字符编码集</p>
 <ol>
 <li><p>transform 方法</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">String str = <span class="hljs-string">&quot;hello&quot;</span>.transform(info -&gt; info+<span class="hljs-string">&quot;world&quot;</span>);<br><span class="hljs-comment">// str : helloworld</span><br><span class="hljs-comment">// 可以链式调用</span><br><span class="hljs-string">&quot;hello&quot;</span>.transform(info -&gt; info+<span class="hljs-string">&quot;world&quot;</span>).transform(String :: toUpperCase);<br></code></pre></td></tr></table></figure></li>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">String str = <span class="hljs-string">&quot;hello&quot;</span>.transform(info -&gt; info+<span class="hljs-string">&quot;world&quot;</span>);<br><span class="hljs-comment">// str : helloworld</span><br><span class="hljs-comment">// 可以链式调用</span><br><span class="hljs-string">&quot;hello&quot;</span>.transform(info -&gt; info+<span class="hljs-string">&quot;world&quot;</span>).transform(String :: toUpperCase);<br></code></pre></td></tr></table></figure>
+</li>
 <li><p>strip 约等于 trim 支持 unicode11</p>
 </li>
 <li><p>indent 在前面加空格 实现原理即是在调用 lines 方法创建一个 stream，然后往前</p>
@@ -547,32 +553,32 @@
 </ol>
 </li>
 <li><p>Files 新增 mismatch 方法</p>
-<p>  比较两个文件的内容以确定它们之间是否存在不匹配</p>
+<p>比较两个文件的内容以确定它们之间是否存在不匹配</p>
 </li>
-<li><p>  其他</p>
+<li><p>其他</p>
 </li>
 <li><p>移出项</p>
-<p>  FileInputStream 和 FileOutputStream、java.util.ZipFile/Inflator/Deflator 的 finalize 方法</p>
+<p>FileInputStream 和 FileOutputStream、java.util.ZipFile/Inflator/Deflator 的 finalize 方法</p>
 </li>
-<li><p>  废弃项</p>
+<li><p>废弃项</p>
 </li>
 </ul>
 <h2 id="JDK-13"><a href="#JDK-13" class="headerlink" title="JDK 13"></a>JDK 13</h2><ul>
 <li><p>JEP350 动态 cds 档案</p>
-<p>  在 java application 执行后进行动态 archive</p>
+<p>在 java application 执行后进行动态 archive</p>
 </li>
 <li><p>JEP351 ZGC 取消使用未使用的内存</p>
-<p>  11 中引入了，这是一款可伸缩的低延迟垃圾收集器，但是不能将内存归还给操作系统。</p>
-<p>  ZGC 的堆由 Region 组成，每个 Region 成为 ZPage。每个 ZPage 与数量可变的已提交内存相关联。当 ZGC 压缩堆的时候，ZPage 就会释放，然后进入 page cache，即 ZPageCache。这些在 page cache 中的 ZPage 集合就标识没有使用的部分堆，这部分内存应该被归还给操作系统</p>
+<p>11 中引入了，这是一款可伸缩的低延迟垃圾收集器，但是不能将内存归还给操作系统。</p>
+<p>ZGC 的堆由 Region 组成，每个 Region 成为 ZPage。每个 ZPage 与数量可变的已提交内存相关联。当 ZGC 压缩堆的时候，ZPage 就会释放，然后进入 page cache，即 ZPageCache。这些在 page cache 中的 ZPage 集合就标识没有使用的部分堆，这部分内存应该被归还给操作系统</p>
 </li>
 <li><p>JEP353 重新实现旧版套接字 API</p>
-<p>  原有问题：</p>
+<p>原有问题：</p>
 <ol>
 <li>混合了 Java 和 C 的代码，维护困难</li>
 <li>使用了线程栈作为 IO 的缓存，导致某些情况下需要增加线程栈的大小</li>
 <li>支持异步关闭，带来了移植问题，和并发问题</li>
 </ol>
-<p>  使用全新的 NioSocketImpl 拉替换 JDK1.0 中的 PlainSocketImpl</p>
+<p>使用全新的 NioSocketImpl 拉替换 JDK1.0 中的 PlainSocketImpl</p>
 <ol>
 <li>便于维护和测试，与 NIO 相同的 JDK 内部结构</li>
 <li>与现有的缓冲区缓存机制集成在一起</li>
@@ -581,17 +587,15 @@
 </ol>
 </li>
 <li><p>JEP354 switch（预览）</p>
-<p>  基于 jdk12 加入了 yield，返回值</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">int</span> i = <span class="hljs-keyword">switch</span>(x)&#123;<br>    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;1&quot;</span> -&gt; <span class="hljs-number">5</span>;<br>    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;2&quot;</span> -&gt; <span class="hljs-number">6</span>;<br>    <span class="hljs-keyword">default</span> -&gt; &#123;<br>        yield <span class="hljs-number">7</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>  yield：结束 switch 结构</p>
-<p>  return：结束方法</p>
+<p>基于 jdk12 加入了 yield，返回值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">int</span> i = <span class="hljs-keyword">switch</span>(x)&#123;<br>    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;1&quot;</span> -&gt; <span class="hljs-number">5</span>;<br>    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;2&quot;</span> -&gt; <span class="hljs-number">6</span>;<br>    <span class="hljs-keyword">default</span> -&gt; &#123;<br>        yield <span class="hljs-number">7</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>yield：结束 switch 结构</p>
+<p>return：结束方法</p>
 </li>
 <li><p>JEP355 文字块（预览）</p>
-<p>  类似于 ES6 的模板字符串</p>
-<p>  简化跨越多行的字符串，避免对换行符等特殊字符进行转义，增加 java 程序中字符串的可读性</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java">String html = <span class="hljs-string">&quot;&quot;</span><span class="hljs-string">&quot;</span><br><span class="hljs-string">    &lt;html&gt;</span><br><span class="hljs-string">        &lt;body&gt;</span><br><span class="hljs-string">            &lt;p&gt;hello&lt;/p&gt;</span><br><span class="hljs-string">        &lt;/body&gt;</span><br><span class="hljs-string">    &lt;/html&gt;</span><br><span class="hljs-string">&quot;</span><span class="hljs-string">&quot;&quot;</span><br></code></pre></td></tr></table></figure>
-
+<p>类似于 ES6 的模板字符串</p>
+<p>简化跨越多行的字符串，避免对换行符等特殊字符进行转义，增加 java 程序中字符串的可读性</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java">String html = <span class="hljs-string">&quot;&quot;</span><span class="hljs-string">&quot;</span><br><span class="hljs-string">    &lt;html&gt;</span><br><span class="hljs-string">        &lt;body&gt;</span><br><span class="hljs-string">            &lt;p&gt;hello&lt;/p&gt;</span><br><span class="hljs-string">        &lt;/body&gt;</span><br><span class="hljs-string">    &lt;/html&gt;</span><br><span class="hljs-string">&quot;</span><span class="hljs-string">&quot;&quot;</span><br></code></pre></td></tr></table></figure>
 <ol>
 <li><p>语法</p>
 </li>

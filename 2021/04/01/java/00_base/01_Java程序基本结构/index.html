@@ -257,7 +257,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：7 天前
+                  本文最后更新于：8 天前
                 
               </p>
             
@@ -265,7 +265,6 @@
               <h2 id="Java文件示例"><a href="#Java文件示例" class="headerlink" title="Java文件示例"></a>Java文件示例</h2><p>以下是一段Java代码的示例，将上一节中所提到的一些关键字及注释使用了进来，具体关键字的用法后面会详细展开，现在请先关注Java程序结构。</p>
 <p>以下代码被命名为<code>HelloWorld.java</code>。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> mypack;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * HelloWorld类</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span></span>&#123;<br>    <span class="hljs-keyword">static</span> Greating g = <span class="hljs-keyword">new</span> Greating();<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;<br>        <span class="hljs-comment">// 打招呼</span><br>        System.out.println(g.say()); <br>    &#125;<br>&#125;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Greating</span></span>&#123;<br>    <span class="hljs-keyword">public</span> String words = <span class="hljs-string">&quot;hello&quot;</span>;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">say</span><span class="hljs-params">()</span></span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.words;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 <h2 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h2><p>类名必须以英文字母开头，后接字母，数字和下划线的组合</p>
 <ol>
 <li>包名：xxx.yyy.zzz</li>

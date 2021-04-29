@@ -257,7 +257,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：7 分钟前
+                  本文最后更新于：1 天前
                 
               </p>
             
@@ -267,14 +267,16 @@
 </blockquote>
 <h2 id="为什么需要包装类型"><a href="#为什么需要包装类型" class="headerlink" title="为什么需要包装类型"></a>为什么需要包装类型</h2><p>那么为什么需要包装类型呢？</p>
 <p>我们知道 Java 是一个面相对象的编程语言，基本类型并不具有对象的性质，为了让基本类型也具有对象的特征，就出现了包装类型（如我们在使用集合类型 Collection 时就一定要使用包装类型而非基本类型），它相当于将基本类型“包装起来”，使得它具有了对象的性质，并且为其添加了属性和方法，丰富了基本类型的操作。</p>
-<h2 id="基本类型与包装类型对应关系"><a href="#基本类型与包装类型对应关系" class="headerlink" title="基本类型与包装类型对应关系"></a>基本类型与包装类型对应关系</h2><table>
+<h2 id="基本类型与包装类型对应关系"><a href="#基本类型与包装类型对应关系" class="headerlink" title="基本类型与包装类型对应关系"></a>基本类型与包装类型对应关系</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>基本类型</th>
 <th>对应的引用类型</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>boolean</td>
 <td>java.lang.Boolean</td>
 </tr>
@@ -306,16 +308,14 @@
 <td>char</td>
 <td>java.lang.Character</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="自动装箱"><a href="#自动装箱" class="headerlink" title="自动装箱"></a>自动装箱</h2><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-keyword">Integer</span> n = <span class="hljs-number">100</span>; // 编译器自动使用<span class="hljs-keyword">Integer</span>.valueOf(<span class="hljs-built_in">int</span>)<br><span class="hljs-built_in">int</span> x = n; // 编译器自动使用<span class="hljs-keyword">Integer</span>.intValue()<br></code></pre></td></tr></table></figure>
-
 <h2 id="不变类"><a href="#不变类" class="headerlink" title="不变类"></a>不变类</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scala">public <span class="hljs-keyword">final</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Integer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Number</span> <span class="hljs-title">implements</span> <span class="hljs-title">Comparable&lt;Integer&gt;</span></span><br></code></pre></td></tr></table></figure>
-
 <h2 id="Integer-amp-amp-Long"><a href="#Integer-amp-amp-Long" class="headerlink" title="Integer &amp;&amp; Long"></a>Integer &amp;&amp; Long</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IntegerCache</span> </span>&#123;<br>    <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> low = -<span class="hljs-number">128</span>;<br>    <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> high;<br>    <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Integer cache[];<br><br>    <span class="hljs-keyword">static</span> &#123;<br>        <span class="hljs-comment">// high value may be configured by property</span><br>        <span class="hljs-keyword">int</span> h = <span class="hljs-number">127</span>;<br>        String integerCacheHighPropValue =<br>            sun.misc.VM.getSavedProperty(<span class="hljs-string">&quot;java.lang.Integer.IntegerCache.high&quot;</span>);<br>        <span class="hljs-keyword">if</span> (integerCacheHighPropValue != <span class="hljs-keyword">null</span>) &#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                <span class="hljs-keyword">int</span> i = parseInt(integerCacheHighPropValue);<br>                i = Math.max(i, <span class="hljs-number">127</span>);<br>                <span class="hljs-comment">// Maximum array size is Integer.MAX_VALUE</span><br>                h = Math.min(i, Integer.MAX_VALUE - (-low) -<span class="hljs-number">1</span>);<br>            &#125; <span class="hljs-keyword">catch</span>( NumberFormatException nfe) &#123;<br>                <span class="hljs-comment">// If the property cannot be parsed into an int, ignore it.</span><br>            &#125;<br>        &#125;<br>        high = h;<br><br>        cache = <span class="hljs-keyword">new</span> Integer[(high - low) + <span class="hljs-number">1</span>];<br>        <span class="hljs-keyword">int</span> j = low;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> k = <span class="hljs-number">0</span>; k &lt; cache.length; k++)<br>            cache[k] = <span class="hljs-keyword">new</span> Integer(j++);<br><br>        <span class="hljs-comment">// range [-128, 127] must be interned (JLS7 5.1.7)</span><br>        <span class="hljs-keyword">assert</span> IntegerCache.high &gt;= <span class="hljs-number">127</span>;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">IntegerCache</span><span class="hljs-params">()</span> </span>&#123;&#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Integer <span class="hljs-title">valueOf</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>&#123;<br>    <span class="hljs-keyword">if</span> (i &gt;= IntegerCache.low &amp;&amp; i &lt;= IntegerCache.high)<br>        <span class="hljs-keyword">return</span> IntegerCache.cache[i + (-IntegerCache.low)];<br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Integer(i);<br>&#125;<br></code></pre></td></tr></table></figure>
-
 <p>我们再来看下以下代码会发生什么</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs java">Integer a1 = Integer.valueOf(<span class="hljs-number">100</span>);<br>Integer a2 = Integer.valueOf(<span class="hljs-number">100</span>);<br><br>Integer b1 = <span class="hljs-number">100</span>;<br>Integer b2 = <span class="hljs-number">100</span>;<br><br>Integer c1 = <span class="hljs-number">200</span>;<br>Integer c2 = <span class="hljs-number">200</span>;<br>		<br><span class="hljs-keyword">if</span>(a1==a2) &#123;<br>    System.out.println(<span class="hljs-string">&quot;相等&quot;</span>);<span class="hljs-comment">//相等</span><br>&#125;<span class="hljs-keyword">else</span> &#123;<br>    System.out.println(<span class="hljs-string">&quot;不相等&quot;</span>);<br>&#125;<br><br><span class="hljs-keyword">if</span>(b1==b2) &#123;<br>    System.out.println(<span class="hljs-string">&quot;相等&quot;</span>);<span class="hljs-comment">//相等</span><br>&#125;<span class="hljs-keyword">else</span> &#123;<br>    System.out.println(<span class="hljs-string">&quot;不相等&quot;</span>);<br>&#125;<br>		<br><span class="hljs-keyword">if</span>(c1==c2) &#123;<br>    System.out.println(<span class="hljs-string">&quot;相等&quot;</span>);<br>&#125;<span class="hljs-keyword">else</span> &#123;<br>    System.out.println(<span class="hljs-string">&quot;不相等&quot;</span>);<span class="hljs-comment">//不相等</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
 <div class="note note-info">
             <p>Integer缓存了-128~127之间的数，这是在类加载期间就完成的。以后需要的时候直接指向它就可以了，省去了构造对象的开支，提高了效率。<br>同理<code>Long</code>也是一样</p>
           </div>

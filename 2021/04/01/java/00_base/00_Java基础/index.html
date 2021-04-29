@@ -257,7 +257,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：7 天前
+                  本文最后更新于：8 天前
                 
               </p>
             
@@ -281,17 +281,17 @@
 <h3 id="JSR，JCP，RI与TCK"><a href="#JSR，JCP，RI与TCK" class="headerlink" title="JSR，JCP，RI与TCK"></a>JSR，JCP，RI与TCK</h3><p>JSR:Java Specification Request (Java 规范提案)<br>JCP:Java Community Process<br>RI:Reference Implementation<br>TCK:Technology Compatibility Kit</p>
 <p>Sun公司为了发展和更新这门语言组成了一个开放性国际组织JCP（Java Community Process），任何想要提议加入Java功能或特性都必须以JSR正式文件（Java Specification Request）进行提交然后经过JCP执行委员会投票，通过即成为最终标准文件，然后必须根据这个JSR做出免费且开发原始码的参考实现RI（Reference Implementation），并提供技术兼容性测试工具包TCK（Technology Compatibility Kit），厂商可以根据JSR实现产品。</p>
 <h2 id="Java-特点"><a href="#Java-特点" class="headerlink" title="Java 特点"></a>Java 特点</h2><ul>
-<li>  简单性</li>
-<li>  面向对象</li>
-<li>  健壮性</li>
-<li>  安全性</li>
-<li>  网络技能(Network-Savvy)</li>
-<li>  体系结构中立</li>
-<li>  可移植性</li>
-<li>  解释型</li>
-<li>  高性能</li>
-<li>  多线程</li>
-<li>  动态性</li>
+<li>简单性</li>
+<li>面向对象</li>
+<li>健壮性</li>
+<li>安全性</li>
+<li>网络技能(Network-Savvy)</li>
+<li>体系结构中立</li>
+<li>可移植性</li>
+<li>解释型</li>
+<li>高性能</li>
+<li>多线程</li>
+<li>动态性</li>
 </ul>
 <h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><h3 id="访问控制"><a href="#访问控制" class="headerlink" title="访问控制"></a>访问控制</h3><p>public、protected、private</p>
 <h3 id="类方法和变量修饰符"><a href="#类方法和变量修饰符" class="headerlink" title="类方法和变量修饰符"></a>类方法和变量修饰符</h3><p>class、interface、abstract、implements、extends、new</p>
@@ -310,15 +310,11 @@
 <li>标识符不能包含空格</li>
 </ol>
 <h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><h3 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 单行注释</span><br></code></pre></td></tr></table></figure>
-
 <h3 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/*</span><br><span class="hljs-comment"> * 多行注释</span><br><span class="hljs-comment"> */</span><br></code></pre></td></tr></table></figure>
-
 <h3 id="文档注释"><a href="#文档注释" class="headerlink" title="文档注释"></a>文档注释</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@see</span> classname(fully-qualified-classname/fully-qualified-classname#method-name) 引用其他类</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@link</span> package.class#member label 使用label作为超链接的行内引用其他类</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@docRoot</span> 该标签产生到文档根目录的相对路径</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@inheritDoc</span> 从当前这个类的组直接的基类中继承相关文档到当前的文档注释中</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@author</span> 作者</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@version</span> 指定源文件的版本</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@since</span> 运行你指定程序代码最早使用的版本</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@param</span> 参数</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@return</span> 返回值</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@throws</span> 异常</span><br><span class="hljs-comment">  * <span class="hljs-doctag">@deprecated</span> 过时方法</span><br><span class="hljs-comment">  */</span><br></code></pre></td></tr></table></figure>
-
-
-<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><p>+，-，*，/，%，++，–</p>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><p>+，-，*，/，%，++，—</p>
 <h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><p>=，+=，-=，*=，/=，%=</p>
-<h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><p>==，!=，&gt;，&lt;，&gt;=，&lt;=，instanceof</p>
+<h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><p>\==，!=，&gt;，&lt;，&gt;=，&lt;=，instanceof</p>
 <h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>!，&amp;&amp;，||</p>
 <h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><p>&lt;&lt;，&gt;&gt;，&gt;&gt;&gt;，&amp;，|，^，~</p>
 <h3 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h3><p>?:</p>

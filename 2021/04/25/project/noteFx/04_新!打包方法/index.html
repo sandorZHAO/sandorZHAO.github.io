@@ -257,7 +257,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：11 小时前
+                  本文最后更新于：1 天前
                 
               </p>
             
@@ -265,17 +265,16 @@
               <div class="note note-success">
             <p><strong>项目地址</strong> <a target="_blank" rel="noopener" href="https://github.com/sandorZHAO/noteFx">https://github.com/sandorZHAO/noteFx</a></p>
           </div>
-
 <p>我在找JavaFx文档的时候,无意间在<a target="_blank" rel="noopener" href="https://openjfx.cn/">官网</a>找到了<a target="_blank" rel="noopener" href="https://github.com/fvarrui/JavaPackager">JavaPackager</a>,安装方法请见git教程</p>
 <h2 id="软件依赖"><a href="#软件依赖" class="headerlink" title="软件依赖"></a>软件依赖</h2><p><a target="_blank" rel="noopener" href="http://www.jrsoftware.org/isinfo.php">Inno Setup</a><br><a target="_blank" rel="noopener" href="https://wixtoolset.org/releases/">WiX Toolset</a></p>
 <p>安装完成后发现了一些问题,在使用<code>mvn package</code>的时候找不到<code>iscc</code>和<code>candle</code>指令.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs plain">Setup installer generation failed due to: Command execution failed: iscc<br>...<br>...<br>...<br>MSI merge module generation failed due to: Command execution failed: candle -out<br>...<br>...<br>...<br></code></pre></td></tr></table></figure>
-
 <p>翻看了JavaPackager的Issue后发现需要安装<code>choco</code></p>
 <blockquote>
 <ol>
 <li>Install Chocolatey package manager.</li>
-<li>Run next command on CMD or PowerShell as Administrator to install both tools:<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">choco <span class="hljs-keyword">install</span> -y innosetup wixtoolset<br></code></pre></td></tr></table></figure></li>
+<li>Run next command on CMD or PowerShell as Administrator to install both tools:<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">choco <span class="hljs-keyword">install</span> -y innosetup wixtoolset<br></code></pre></td></tr></table></figure>
+</li>
 </ol>
 </blockquote>
 <p>当装好后发现,<code>iscc</code>可以运行了,但是candle不可以,原来choco没有安装二进制的wixtoolset</p>

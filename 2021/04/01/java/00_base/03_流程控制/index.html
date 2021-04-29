@@ -257,7 +257,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：6 天前
+                  本文最后更新于：7 天前
                 
               </p>
             
@@ -267,19 +267,13 @@
 <li>if-else</li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">if</span> (xxx) &#123;<br>    <span class="hljs-comment">// dosomething</span><br>&#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(yyy) &#123;<br>    <span class="hljs-comment">// dosomething</span><br>&#125; <span class="hljs-keyword">else</span> &#123;<br>    <span class="hljs-comment">// dosomething</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
 <h2 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">switch</span>(expression)&#123; <br>    <span class="hljs-keyword">case</span> value : <br>        <span class="hljs-comment">// dosomething </span><br>        <span class="hljs-keyword">break</span>; <br>    <span class="hljs-comment">//可选 </span><br>    <span class="hljs-keyword">case</span> value : <br>        <span class="hljs-comment">// dosomething </span><br>        <span class="hljs-keyword">break</span>; <br>    <span class="hljs-comment">//可选 </span><br>    <span class="hljs-comment">//你可以有任意数量的case语句 </span><br>    <span class="hljs-keyword">default</span> : <br>        <span class="hljs-comment">//可选 </span><br>        <span class="hljs-comment">// dosomething </span><br>&#125;<br></code></pre></td></tr></table></figure>
-
 <div class="note note-warning">
             <p>需要注意的是，case1 中语句如果没有break,那么满足case1条件的情况下会依次往后执行,直到执行到break;</p>
           </div>
-
 <h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">while</span> (expression) &#123;<br>    <span class="hljs-comment">// dosomething </span><br>    <span class="hljs-keyword">if</span>(xxx)&#123;<br>        <span class="hljs-keyword">continue</span>;<br>    &#125;<br>    <span class="hljs-keyword">if</span>(yyy)&#123;<br>        <span class="hljs-keyword">break</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 <h2 id="do-while循环"><a href="#do-while循环" class="headerlink" title="do while循环"></a>do while循环</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">do</span> &#123;<br>    <span class="hljs-comment">// dosomething </span><br>    <span class="hljs-keyword">if</span>(xxx)&#123;<br>        <span class="hljs-keyword">continue</span>;<br>    &#125;<br>    <span class="hljs-keyword">if</span>(yyy)&#123;<br>        <span class="hljs-keyword">break</span>;<br>    &#125;<br>&#125; <span class="hljs-keyword">while</span> (expression)<br></code></pre></td></tr></table></figure>
-
 <h2 id="for"><a href="#for" class="headerlink" title="for"></a>for</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i&lt; <span class="hljs-number">10</span>; i++) &#123;<br>    <span class="hljs-comment">// dosomething </span><br>    <span class="hljs-keyword">if</span>(xxx)&#123;<br>        <span class="hljs-keyword">continue</span>;<br>    &#125;<br>    <span class="hljs-keyword">if</span>(yyy)&#123;<br>        <span class="hljs-keyword">break</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 <h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><p>break语句可以跳出当前循环；<br>break语句通常配合if，在满足条件时提前结束整个循环；<br>break语句总是跳出最近的一层循环；<br>break可以中断switch多重选择依次向下执行；</p>
 <h2 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h2><p>continue语句可以提前结束本次循环；<br>continue语句通常配合if，在满足条件时提前结束本次循环。</p>
 
