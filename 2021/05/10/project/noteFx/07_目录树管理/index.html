@@ -16,11 +16,11 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="noteFx新打包方法">
+  <meta name="description" content="noteFx目录树管理">
   <meta name="author" content="zhaojj">
   <meta name="keywords" content="blog,fluid">
   
-  <title>noteFx-新!打包方法 - zhaojj&#39;s blog</title>
+  <title>noteFx-目录树管理 - zhaojj&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -178,7 +178,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="noteFx-新!打包方法">
+            <span class="h2" id="subtitle" title="noteFx-目录树管理">
               
             </span>
 
@@ -193,8 +193,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-04-25 23:15" pubdate>
-        2021年4月25日 晚上
+      <time datetime="2021-05-10 01:24" pubdate>
+        2021年5月10日 凌晨
       </time>
     </span>
   
@@ -205,7 +205,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      200 字
+      575 字
     </span>
   
 
@@ -215,7 +215,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2
+      9
        分钟
     </span>
   
@@ -253,11 +253,11 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">noteFx-新!打包方法</h1>
+            <h1 style="display: none">noteFx-目录树管理</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：11 天前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
@@ -265,28 +265,46 @@
               <div class="note note-success">
             <p><strong>项目地址</strong> <a target="_blank" rel="noopener" href="https://github.com/sandorZHAO/noteFx">https://github.com/sandorZHAO/noteFx</a></p>
           </div>
-<p>我在找JavaFx文档的时候,无意间在<a target="_blank" rel="noopener" href="https://openjfx.cn/">官网</a>找到了<a target="_blank" rel="noopener" href="https://github.com/fvarrui/JavaPackager">JavaPackager</a>,安装方法请见git教程</p>
-<h2 id="软件依赖"><a href="#软件依赖" class="headerlink" title="软件依赖"></a>软件依赖</h2><p><a target="_blank" rel="noopener" href="http://www.jrsoftware.org/isinfo.php">Inno Setup</a><br><a target="_blank" rel="noopener" href="https://wixtoolset.org/releases/">WiX Toolset</a></p>
-<p>安装完成后发现了一些问题,在使用<code>mvn package</code>的时候找不到<code>iscc</code>和<code>candle</code>指令.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs plain">Setup installer generation failed due to: Command execution failed: iscc<br>...<br>...<br>...<br>MSI merge module generation failed due to: Command execution failed: candle -out<br>...<br>...<br>...<br></code></pre></td></tr></table></figure>
-<p>翻看了JavaPackager的Issue后发现需要安装<code>choco</code></p>
-<blockquote>
-<ol>
-<li>Install Chocolatey package manager.</li>
-<li>Run next command on CMD or PowerShell as Administrator to install both tools:<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">choco <span class="hljs-keyword">install</span> -y innosetup wixtoolset<br></code></pre></td></tr></table></figure>
+<h2 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h2><ol>
+<li>打开文件夹后展示文件夹下所有文件(文件和文件夹)</li>
+<li>监听目标文件夹下的新增删除等动作,并且更新目录树</li>
+</ol>
+<h2 id="使用组件"><a href="#使用组件" class="headerlink" title="使用组件"></a>使用组件</h2><ol>
+<li><code>TreeView</code></li>
+<li><code>DirectoryChooser</code></li>
+<li>WatchService监听</li>
+</ol>
+<h2 id="打开文件夹-并获取相关数据"><a href="#打开文件夹-并获取相关数据" class="headerlink" title="打开文件夹,并获取相关数据"></a>打开文件夹,并获取相关数据</h2><ol>
+<li><p>首先使用<code>DirectoryChooser</code>做一个简单的打开文件夹功能,这样就可以获取<code>目标文件夹</code>的<code>File</code>对象</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">DirectoryChooser chooser = <span class="hljs-keyword">new</span> DirectoryChooser();<br>File dir = chooser.showDialog(Main.get());<br><span class="hljs-keyword">if</span>(dir == <span class="hljs-keyword">null</span>)&#123;<br>    <span class="hljs-keyword">return</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>需要对<code>目标文件夹</code>进行遍历,构建<code>文件树对象</code></p>
+<ul>
+<li><p><code>文件树对象</code></p>
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileTreeNode</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Comparable</span>&lt;<span class="hljs-title">FileTreeNode</span>&gt; </span>&#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> String name;<br>    <span class="hljs-keyword">private</span> Boolean isExpanded;<br>    <span class="hljs-keyword">private</span> File file;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> List&lt;FileTreeNode&gt; children;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">FileTreeNode</span><span class="hljs-params">(String name)</span> </span>&#123;<br>        <span class="hljs-keyword">this</span>.name = name;<br>        <span class="hljs-keyword">this</span>.isExpanded = <span class="hljs-keyword">false</span>;<br>        <span class="hljs-keyword">this</span>.children = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>    &#125;<br><br>    <span class="hljs-comment">// get set 省略</span><br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.name;<br>    &#125;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compareTo</span><span class="hljs-params">(FileTreeNode o)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.getName().compareToIgnoreCase(o.getName());<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<ul>
+<li>遍历文件夹构建<code>文件树对象</code> <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">iterateFiles</span><span class="hljs-params">(FileTreeNode fileTreeNode)</span> </span>&#123;<br>    File file = fileTreeNode.getFile();<br><br>    <span class="hljs-keyword">if</span> (file.isDirectory()) &#123;<br>        File[] files = file.listFiles();<br>        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">null</span> == files || files.length &lt;= <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br><br>        <span class="hljs-keyword">for</span> (File fi : files) &#123;<br>            FileTreeNode fti = <span class="hljs-keyword">new</span> FileTreeNode(fi.getName());<br>            fti.setExpanded(<span class="hljs-keyword">false</span>);<br>            fti.setFile(fi);<br>            fileTreeNode.getChildren().add(fti);<br>            iterateFiles(fti);<br>        &#125;<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>        FileTreeNode fti = <span class="hljs-keyword">new</span> FileTreeNode(file.getName());<br>        fti.setExpanded(<span class="hljs-keyword">false</span>);<br>        fti.setFile(file);<br>        fileTreeNode.getChildren().add(fti);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>构建<code>TreeView</code></p>
+<ul>
+<li><p>首先视图中拥有一个<code>TreeView</code>节点</p>
+  <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">TreeView</span> <span class="hljs-attr">fx:id</span>=<span class="hljs-string">&quot;treeView&quot;</span> <span class="hljs-attr">SplitPane.resizableWithParent</span>=<span class="hljs-string">&quot;false&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">TreeView</span>&gt;</span><br></code></pre></td></tr></table></figure>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@FXML</span><br><span class="hljs-keyword">public</span> TreeView&lt;FileTreeNode&gt; treeView;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>根据<code>文件树对象</code>构建<code>TreeView</code>树</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">buildTree</span><span class="hljs-params">(FileTreeNode fileTreeNode, TreeItem&lt;FileTreeNode&gt; rootItem)</span> </span>&#123;<br>    List&lt;FileTreeNode&gt; children = fileTreeNode.getChildren();<br>    <span class="hljs-keyword">if</span> (children == <span class="hljs-keyword">null</span>) &#123;<br>        <span class="hljs-keyword">return</span>;<br>    &#125;<br>    Consumer&lt;FileTreeNode&gt; consumer = fti -&gt; &#123;<br>        File fi = fti.getFile();<br>        TreeItem&lt;FileTreeNode&gt; item = <span class="hljs-keyword">new</span> TreeItem&lt;&gt;(fti);<br>        <span class="hljs-keyword">if</span> (fi.isDirectory()) &#123;<br>            ImageView iv = <span class="hljs-keyword">new</span> ImageView(FOLDER_ICON);<br>            iv.setSmooth(<span class="hljs-keyword">true</span>);<br>            iv.setViewport(<span class="hljs-keyword">new</span> Rectangle2D(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">16</span>, <span class="hljs-number">16</span>));<br>            item.setGraphic(iv);<br>            item.setExpanded(fti.getExpanded());<br>            rootItem.getChildren().add(item);<br>            buildTree(fti, item);<br>        &#125; <span class="hljs-keyword">else</span> &#123;<br>            item.setGraphic(<span class="hljs-keyword">new</span> ImageView(FILE_ICON));<br>            rootItem.getChildren().add(item);<br>        &#125;<br>    &#125;;<br>    children.stream().filter(f -&gt; !f.getFile().isHidden() &amp;&amp; f.getFile().isDirectory()).sorted().forEach(consumer);<br>    children.stream().filter(f -&gt; !f.getFile().isHidden() &amp;&amp; f.getFile().isFile()).sorted().forEach(consumer);<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>构建完成后只需要向<code>treeView</code>中挂在就完成展示了</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java">fileTreeNode = <span class="hljs-keyword">new</span> FileTreeNode(dir.getName());<br>fileTreeNode.setExpanded(<span class="hljs-keyword">true</span>);<br>fileTreeNode.setFile(dir);<br>iterateFiles(fileTreeNode);<br><span class="hljs-comment">// 设置图标</span><br>ImageView iv = <span class="hljs-keyword">new</span> ImageView(FOLDER_ICON);<br>iv.setSmooth(<span class="hljs-keyword">true</span>);<br>iv.setViewport(<span class="hljs-keyword">new</span> Rectangle2D(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">16</span>, <span class="hljs-number">16</span>));<br><span class="hljs-comment">// 根节点</span><br>TreeItem&lt;FileTreeNode&gt; rootTree = <span class="hljs-keyword">new</span> TreeItem&lt;&gt;(fileTreeNode, iv);<br><span class="hljs-comment">// 在根节点上挂在其子节点</span><br>buildTree(fileTreeNode, rootTree);<br>treeView.setRoot(rootTree);<br>rootTree.setExpanded(<span class="hljs-keyword">true</span>);<br></code></pre></td></tr></table></figure>
+</li>
+</ul>
 </li>
 </ol>
-</blockquote>
-<p>当装好后发现,<code>iscc</code>可以运行了,但是candle不可以,原来choco没有安装二进制的wixtoolset</p>
-<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol>
-<li>卸载<code>choco</code></li>
-<li>安装<code>Inno Setup</code>,<code>WiX Toolset</code></li>
-<li>加入环境变量PATH,就可以在控制台使用iscc和candle了</li>
-</ol>
-<div class="note note-warning">
-            <p>需要注意的是,idea可能需要重启</p>
-          </div>
-
+<h2 id="待续"><a href="#待续" class="headerlink" title="待续"></a>待续</h2>
             </div>
             <hr>
             <div>
@@ -322,18 +340,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/25/project/noteFx/03_%E6%89%93%E5%8C%85%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">noteFx-打包安装程序</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/25/project/noteFx/02_%E6%89%93%E5%8C%85exe/">
-                        <span class="hidden-mobile">noteFx-打包exe</span>
+                      <a href="/2021/04/30/algorithm/codeforce/Contest%201519/">
+                        <span class="hidden-mobile">Contest 1519</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
