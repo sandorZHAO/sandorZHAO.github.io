@@ -205,7 +205,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.3k 字
+      2.5k 字
     </span>
   
 
@@ -215,7 +215,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      27
+      29
        分钟
     </span>
   
@@ -257,7 +257,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：18 天前
+                  本文最后更新于：3 天前
                 
               </p>
             
@@ -280,6 +280,13 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span></span>&#123;<br>    <span class="hljs-keyword">public</span> String name;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> age;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span></span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;<br>        Cat pikaqiu = <span class="hljs-keyword">new</span> Cat();<br>        pikaqiu.name = <span class="hljs-string">&quot;皮卡丘&quot;</span>;<br>        pikaqiu.age = <span class="hljs-number">1</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 <h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span></span>&#123;<br>    <span class="hljs-keyword">public</span> String name;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> age;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">crawl</span><span class="hljs-params">()</span></span>&#123;<br>        System.out.println(<span class="hljs-string">&quot;我叫&quot;</span><span class="hljs-keyword">this</span>.name + <span class="hljs-string">&quot;,我在爬&quot;</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span></span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;<br>        Person zhangsan = <span class="hljs-keyword">new</span> Person();<br>        zhangsan.name = <span class="hljs-string">&quot;皮卡丘&quot;</span>;<br>        zhangsan.age = <span class="hljs-number">1</span>;<br>        zhangsan.crawl();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 <h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><p>构造方法是一种特殊的方法，它是一个<strong>与类同名</strong>的方法。对象的创建就是通过构造方法来完成，其功能主要是完成对象的初始化。当类实例化一个对象时会自动调用构造方法。</p>
+<p>构造方法特点:</p>
+<ol>
+<li>名字与类名相同。</li>
+<li>没有返回值，但不能用 void 声明构造函数。</li>
+<li>生成类的对象时自动执行，无需调用。</li>
+</ol>
+<p>根据第一点,我们知道子类无法去重写父类的构造方法。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span></span>&#123;<br>    <span class="hljs-keyword">public</span> String name;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> age;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Cat</span><span class="hljs-params">()</span></span>&#123;<br>        <span class="hljs-keyword">this</span>.name = <span class="hljs-string">&quot;&quot;</span>;<br>        <span class="hljs-keyword">this</span>.age = <span class="hljs-number">1</span>;<br>    &#125; <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Cat</span><span class="hljs-params">(String name, <span class="hljs-keyword">int</span> age)</span></span>&#123;<br>        <span class="hljs-keyword">this</span>.name = name;<br>        <span class="hljs-keyword">this</span>.age = age;<br>    &#125; <br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">crawl</span><span class="hljs-params">()</span></span>&#123;<br>        System.out.println(<span class="hljs-string">&quot;我叫&quot;</span><span class="hljs-keyword">this</span>.name + <span class="hljs-string">&quot;,我在爬&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 <div class="note note-info">
             <ol><li>没有返回值,甚至连void也没有</li><li>不能被static、final、synchronized、abstract和native修饰</li><li>类中必定有构造方法，若不写，系统自动添加无参构造方法</li></ol>
@@ -337,6 +344,9 @@
 <p>子类方法不能缩小父类方法的访问权限。</p>
 <p>子类方法不能抛出比父类方法更多的异常(但子类方法可以不抛出异常)。</p>
 <p>存在于父类和子类之间。 方法被定义为 final 不能被重写。  </p>
+<p>重写遵循<code>两同两小一大</code><br><div class="note note-info">
+            <p><strong>两同两小一大</strong></p><ul><li>“两同”即方法名相同、形参列表相同；</li><li>“两小”指的是子类方法返回值类型应比父类方法返回值类型更小或相等，子类方法声明抛出的异常类应比父类方法声明抛出的异常类更小或相等；</li><li>“一大”指的是子类方法的访问权限应比父类方法的访问权限更大或相等。</li></ul>
+          </div></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span></span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">eat</span><span class="hljs-params">()</span></span>&#123;<br>        System.out.println(<span class="hljs-string">&quot;吃!!!&quot;</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BritishShorthairCat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Cat</span></span>&#123;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">eat</span><span class="hljs-params">()</span></span>&#123;<br>        System.out.println(<span class="hljs-string">&quot;蓝白在吃!!!&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 <h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><p>多态是指，针对某个类型的方法调用，其真正执行的方法取决于运行时期实际类型的方法。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">Cat a = <span class="hljs-keyword">new</span> BritishShorthairCat();<br>a.eat();<br></code></pre></td></tr></table></figure>

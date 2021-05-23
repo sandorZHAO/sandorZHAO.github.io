@@ -205,7 +205,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      443 字
+      434 字
     </span>
   
 
@@ -257,15 +257,15 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 分钟前
+                  本文最后更新于：4 天前
                 
               </p>
             
             <div class="markdown-body">
               <p>jdk1.5</p>
-<p>注解本质是一个继承了 Annotation 的特殊接口，其具体实现类是 Java 运行时生成的动态代理类。而我们通过反射获取注解时，返回的是 Java 运行时生成的动态代理对象$Proxy1。通过代理对象调用自定义注解（接口）的方法，会最终调用 AnnotationInvocationHandler 的 invoke 方法。该方法会从 memberValues 这个 Map 中索引出对应的值。而 memberValues 的来源是 Java 常量池。</p>
+<p>注解本质是一个继承了 <code>Annotation</code> 的特殊接口，其具体实现类是 Java 运行时生成的动态代理类。而我们通过反射获取注解时，返回的是 Java 运行时生成的动态代理对象$Proxy1。通过代理对象调用自定义注解（接口）的方法，会最终调用 AnnotationInvocationHandler 的 invoke 方法。该方法会从 memberValues 这个 Map 中索引出对应的值。而 memberValues 的来源是 Java 常量池。</p>
 <h2 id="元注解"><a href="#元注解" class="headerlink" title="元注解"></a>元注解</h2><ol>
-<li>@Documented<br> 用于制作文档，不是很重要，忽略便是</li>
+<li>@Documented<br> 用于制作文档</li>
 <li>@Target<br> 限定注解使用位置</li>
 <li><p>@Retention<br> 注解的保留策略(SOURCE/CLASS/RUNTIME)</p>
 <ul>
@@ -316,6 +316,12 @@
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2021/05/19/netty/00_%E4%BB%8B%E7%BB%8D/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Netty介绍</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">

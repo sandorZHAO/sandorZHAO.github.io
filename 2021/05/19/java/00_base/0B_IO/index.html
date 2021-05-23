@@ -16,11 +16,11 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="java Object">
+  <meta name="description" content="BIO,NIO,AIO">
   <meta name="author" content="zhaojj">
   <meta name="keywords" content="blog,fluid">
   
-  <title>Java Object - zhaojj&#39;s blog</title>
+  <title>IO - zhaojj&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -178,7 +178,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Java Object">
+            <span class="h2" id="subtitle" title="IO">
               
             </span>
 
@@ -193,8 +193,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-04-22 18:50" pubdate>
-        2021年4月22日 晚上
+      <time datetime="2021-05-19 19:15" pubdate>
+        2021年5月19日 晚上
       </time>
     </span>
   
@@ -205,7 +205,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      967 字
+      596 字
     </span>
   
 
@@ -215,7 +215,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      10
+      6
        分钟
     </span>
   
@@ -253,81 +253,47 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Java Object</h1>
+            <h1 style="display: none">IO</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 个月前
+                  本文最后更新于：4 天前
                 
               </p>
             
             <div class="markdown-body">
-              <h2 id="一切皆对象-Object"><a href="#一切皆对象-Object" class="headerlink" title="一切皆对象 Object"></a>一切皆对象 Object</h2><h2 id="Object方法"><a href="#Object方法" class="headerlink" title="Object方法"></a>Object方法</h2><h3 id="getClass"><a href="#getClass" class="headerlink" title="getClass"></a>getClass</h3><p>用来获取运行时的对象；当声明对象和.class 文件中真正的对象不一致时，该方法会返回.class 的对象</p>
-<p>主要用于 Java 的反射 <code>public final native Class&lt;?&gt; getClass();</code></p>
-<h3 id="hashCode"><a href="#hashCode" class="headerlink" title="hashCode"></a>hashCode</h3><p>用来获取一个对象 int 类型的 hash 码</p>
-<p><code>public native int hashCode();</code></p>
+              <h1 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h1><h2 id="同步异步，阻塞非阻塞"><a href="#同步异步，阻塞非阻塞" class="headerlink" title="同步异步，阻塞非阻塞"></a>同步异步，阻塞非阻塞</h2><h3 id="同步异步"><a href="#同步异步" class="headerlink" title="同步异步"></a>同步异步</h3><p>同步和异步关注的是消息通信机制（调用方调用方式）</p>
 <ol>
-<li>native</li>
-<li>没有 final，可重写</li>
-<li>注意点<ol>
-<li>在 java 程序执行过程中，在一个对象没有被改变的前提下，无论这个对象被调用多少次，hashCode 方法都会返回相同的 int 值。这个 int 值可在不同的程序中不同;</li>
-<li>如果 2 个对象使用 equals 方法进行比较并且相同的话，那么这 2 个对象的 hashCode 方法的值也必须相等;</li>
-<li>如果根据 equals 方法，得到两个对象不相等，那么这 2 个对象的 hashCode 值可以不相同; 但是，不相等的对象的 hashCode 值不同的话可以提高哈希表的性能;</li>
+<li>同步<br> 同步就是发起一个调用后，被调用者未处理完请求之前，调用不返回。</li>
+<li>异步<br> 异步就是发起一个调用后，立刻得到被调用者的回应表示已接收到请求，但是被调用者并没有返回结果，此时我们可以处理其他的请求，被调用者通常依靠事件，回调等机制来通知调用者其返回结果。</li>
 </ol>
-</li>
-</ol>
-<h3 id="equals"><a href="#equals" class="headerlink" title="equals"></a>equals</h3><p>是比较两个对象是否相等</p>
-<p>默认是实现是比较引用是否相同, 即是否为同一个内存对象;</p>
+<h3 id="阻塞非阻塞"><a href="#阻塞非阻塞" class="headerlink" title="阻塞非阻塞"></a>阻塞非阻塞</h3><p>阻塞和非阻塞关注的是程序在等待调用结果（消息，返回值）时的状态（调用方调用状态）</p>
 <ol>
-<li>自反性 对于任意非空对象 x,x.equals(x)=true</li>
-<li>对称性 对于任意非空对象 x,y, x.equals(y) = y.equals.(x)</li>
-<li>传递性 对于任意非空对象 x,y,z, 若有 x.equals(y) , y.equals.(z),则 x.equals(z) =true</li>
-<li>一致性 对于任意非空对象 x,y, x,y 都没有修改的前提下，x.equals(y)值唯一</li>
-<li>对于任意非空对象 x,x.equals(null)，一定为 false</li>
-<li>重写 equals 最好重写 hashcode</li>
+<li>阻塞<br>阻塞就是发起一个请求，调用者一直等待请求结果返回，也就是当前线程会被挂起，无法从事其他任务，只有当条件就绪才能继续。</li>
+<li>非阻塞<br>非阻塞就是发起一个请求，调用者不用一直等着结果返回，可以先去干其他事情。</li>
 </ol>
-<h3 id="clone"><a href="#clone" class="headerlink" title="clone"></a>clone</h3><p><code>protected native Object clone() throws CloneNotSupportedException;</code></p>
-<p>返回当前对象的一份拷贝</p>
-<p>引申出深拷贝和浅拷贝</p>
-<blockquote>
-<p>浅拷贝：基本数据类型直接值传递，引用数据类型拷贝引用地址</p>
-<p>深拷贝：复制对象的所有基本数据类型，为所有引用数据类型的成员变量申请存储空间</p>
-</blockquote>
-<h3 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a>toString</h3><h3 id="notify-和-notifyAll-和-wait"><a href="#notify-和-notifyAll-和-wait" class="headerlink" title="notify 和 notifyAll 和 wait"></a>notify 和 notifyAll 和 wait</h3><ol>
-<li><p>wait 在同步代码块中调用该方法时，当前线程立即释放锁并等待，知道有其他线程调用</p>
-</li>
-<li><p>notify/notifyAll 或等待超时时，才会去再次竞争锁，成功后继续执行下面的逻辑</p>
-</li>
-<li><p>wait<br><code>public final native void wait(long timeout) throws InterruptedException;</code></p>
-</li>
-<li><p>notify</p>
-<p>线程 A 在同步代码块中调用该方法，会随机地唤醒一个等待在该对象锁上的线程 B，主语这时候唤醒的线程 B 还没有持有锁，必须要等到线程 A 释放锁才能持有该锁。</p>
-<blockquote>
-<p>如果线程在 A 对象的同步代码块中执行 B 对象的 notify，会抛出 <code>illegalMonitorStateException</code></p>
-</blockquote>
-</li>
-<li><p>notyfyAll</p>
-<p>线程 A 在同步代码块中调用该方法时，会唤醒所有等待在该锁上的线程，同样的，这些唤醒的线程只有在线程 A 放锁以后，才能再次竞争该锁，竞争到该锁的线程继续执行，其他线程等待</p>
-<blockquote>
-<p>如果调用的线程不是该锁的持有者，那么也会抛出<code>illegalMonitorStateException</code></p>
-</blockquote>
-</li>
-</ol>
-<h3 id="finalize"><a href="#finalize" class="headerlink" title="finalize"></a>finalize</h3><p><code>protected void finalize() throws Throwable &#123; &#125;</code></p>
-<p>JVM 在进行 GC 时，如果这个对象需要被回收，会判断该方法是否被重写，若未重写，则直接回收该对象内存空间。反之，判断该对象的 finalize 是否被执行过，若没有执行过，会放入一个队列，由低优先级的线程去执行该对象的 finalize 方法，执行完毕后再判断该对象是否需要回收；如果该对象已经执行一遍finalize 方法，直接回收对象的内存空间</p>
+<h3 id="组合概念"><a href="#组合概念" class="headerlink" title="组合概念"></a>组合概念</h3><p>以上4种概念共有4种组合情况</p>
 <ol>
-<li>对象可能不被垃圾回收</li>
-<li>垃圾回收并不等于析构</li>
-<li>垃圾回收只与内存有关</li>
+<li>同步阻塞（单任务，顺序执行）</li>
+<li>同步非阻塞（多任务，定时查看任务执行状态）</li>
+<li>异步阻塞（单任务，自动提交任务状态）</li>
+<li>异步非阻塞（多任务，自动提交任务状态）</li>
 </ol>
-<h3 id="registerNatives"><a href="#registerNatives" class="headerlink" title="registerNatives"></a>registerNatives</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">native</span> <span class="hljs-keyword">void</span> <span class="hljs-title">registerNatives</span><span class="hljs-params">()</span></span>;<br><br><span class="hljs-keyword">static</span> &#123;<br>    registerNatives();<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<h3 id="概念层面"><a href="#概念层面" class="headerlink" title="概念层面"></a>概念层面</h3><ol>
+<li>CPU层面<br>操作系统的轮询（同步非阻塞）或者DMA（异步非阻塞）</li>
+<li><p>线程层面<br>在线程层面，操作系统将底层异步非阻塞的IO方式进行封装，把相关系统调用以同步方式展现出来。然而，同步阻塞的IO会使线程挂起，同步非阻塞的IO会消耗CPU资源在轮询上。为了解决这一问题，就有3种思路：</p>
 <ol>
-<li>static</li>
-<li>native</li>
+<li>多线程（同步阻塞）；</li>
+<li>IO多路复用（select，poll，epoll）（同步非阻塞，严格地来讲，是把阻塞点改变了位置）；</li>
+<li>直接暴露出异步的IO接口，如kernel-aio和IOCP（异步非阻塞）。</li>
 </ol>
-<p>注册原生方法：</p>
-<p>必须通过<code>RegisterNatives</code>从自己的库中的本机代码调用JNI函数</p>
-
+</li>
+<li><p>程序层面</p>
+</li>
+</ol>
+<p>当然这里讨论的是IO的同步异步阻塞非阻塞，个人认为是Java 网络IO是属于程序层面的</p>
+<h2 id="Java-IO"><a href="#Java-IO" class="headerlink" title="Java IO"></a>Java IO</h2><h3 id="BIO（Blocking-I-O）"><a href="#BIO（Blocking-I-O）" class="headerlink" title="BIO（Blocking I/O）"></a>BIO（Blocking I/O）</h3><p>BIO通信（一请求一应答）模型图如下</p>
+<h3 id="NIO（New-I-O）"><a href="#NIO（New-I-O）" class="headerlink" title="NIO（New I/O）"></a>NIO（New I/O）</h3><h3 id="AIO（Asynchronous-I-O）"><a href="#AIO（Asynchronous-I-O）" class="headerlink" title="AIO（Asynchronous I/O）"></a>AIO（Asynchronous I/O）</h3>
             </div>
             <hr>
             <div>
@@ -354,18 +320,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/23/java/02_core_class/02_%E5%8C%85%E8%A3%85%E7%B1%BB%E5%9E%8B/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">包装类型</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/19/project/io-ui/00_%E4%BB%8B%E7%BB%8D/">
-                        <span class="hidden-mobile">ioui-介绍</span>
+                      <a href="/2021/05/19/netty/00_%E4%BB%8B%E7%BB%8D/">
+                        <span class="hidden-mobile">Netty介绍</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
