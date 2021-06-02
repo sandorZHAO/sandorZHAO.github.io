@@ -6,7 +6,7 @@
   <link href="https://blog.pyjava.com/atom.xml" rel="self"/>
   
   <link href="https://blog.pyjava.com/"/>
-  <updated>2021-05-19T10:08:43.532Z</updated>
+  <updated>2021-06-02T16:27:14.345Z</updated>
   <id>https://blog.pyjava.com/</id>
   
   <author>
@@ -17,13 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>数据结构与算法</title>
+    <link href="https://blog.pyjava.com/2021/06/03/algorithm/base/00_base/"/>
+    <id>https://blog.pyjava.com/2021/06/03/algorithm/base/00_base/</id>
+    <published>2021-06-02T16:14:00.000Z</published>
+    <updated>2021-06-02T16:27:14.345Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h1><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><ol><li>数组</li><li>栈</li><li>链表</li><li>队列</li><li>树</li><li>图</li><li>堆</li><li>散列表</li></ol><p>数据结构最最基础的就是<code>数组</code>，<code>链表</code>。其他所有的数据结构的是可以由基础数据结构实现。</p><h3 id="数组与链表的差别"><a href="#数组与链表的差别" class="headerlink" title="数组与链表的差别"></a>数组与链表的差别</h3><ul><li><p>数组<br>  数组是紧凑连续存储，因此可以随机访问，通过索引快速找到对应元素，而且相对节约存储空间。</p><ol><li>增 O(n)</li><li>删 O(n)</li><li>改 O(1)</li><li>查 O(1)</li></ol></li><li><p>链表<br>  由于元素不连续，依靠知真指向下一个元素的位置。</p><ol><li>增 O(1)</li><li>删 O(1)</li><li>改 O(n)</li><li>查 O(n)</li></ol></li></ul><h3 id="数据结构的基本操作"><a href="#数据结构的基本操作" class="headerlink" title="数据结构的基本操作"></a>数据结构的基本操作</h3><p>对于任意的数据结构，最基本的操作就是：增、删、改、查（遍历）。</p><h2 id="什么是算法"><a href="#什么是算法" class="headerlink" title="什么是算法"></a>什么是算法</h2><p>任何良定义的计算过程，该过程取某个值或值的集合作为输入并产生某个值或值的集合作为输出。</p><p>程序=数据结构+算法</p><h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><ul><li><p>时间复杂度</p></li><li><p>空间复杂度</p></li></ul>]]></content>
+    
+    
+    <summary type="html">数据结构与算法</summary>
+    
+    
+    
+    <category term="algorithm" scheme="https://blog.pyjava.com/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://blog.pyjava.com/tags/algorithm/"/>
+    
+  </entry>
+  
+  <entry>
     <title>IO</title>
     <link href="https://blog.pyjava.com/2021/05/19/java/00_base/0B_IO/"/>
     <id>https://blog.pyjava.com/2021/05/19/java/00_base/0B_IO/</id>
     <published>2021-05-19T11:15:00.000Z</published>
-    <updated>2021-05-19T10:08:43.532Z</updated>
+    <updated>2021-05-24T07:36:41.191Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h1><h2 id="同步异步，阻塞非阻塞"><a href="#同步异步，阻塞非阻塞" class="headerlink" title="同步异步，阻塞非阻塞"></a>同步异步，阻塞非阻塞</h2><h3 id="同步异步"><a href="#同步异步" class="headerlink" title="同步异步"></a>同步异步</h3><p>同步和异步关注的是消息通信机制（调用方调用方式）</p><ol><li>同步<br> 同步就是发起一个调用后，被调用者未处理完请求之前，调用不返回。</li><li>异步<br> 异步就是发起一个调用后，立刻得到被调用者的回应表示已接收到请求，但是被调用者并没有返回结果，此时我们可以处理其他的请求，被调用者通常依靠事件，回调等机制来通知调用者其返回结果。</li></ol><h3 id="阻塞非阻塞"><a href="#阻塞非阻塞" class="headerlink" title="阻塞非阻塞"></a>阻塞非阻塞</h3><p>阻塞和非阻塞关注的是程序在等待调用结果（消息，返回值）时的状态（调用方调用状态）</p><ol><li>阻塞<br>阻塞就是发起一个请求，调用者一直等待请求结果返回，也就是当前线程会被挂起，无法从事其他任务，只有当条件就绪才能继续。</li><li>非阻塞<br>非阻塞就是发起一个请求，调用者不用一直等着结果返回，可以先去干其他事情。</li></ol><h3 id="组合概念"><a href="#组合概念" class="headerlink" title="组合概念"></a>组合概念</h3><p>以上4种概念共有4种组合情况</p><ol><li>同步阻塞（单任务，顺序执行）</li><li>同步非阻塞（多任务，定时查看任务执行状态）</li><li>异步阻塞（单任务，自动提交任务状态）</li><li>异步非阻塞（多任务，自动提交任务状态）</li></ol><h3 id="概念层面"><a href="#概念层面" class="headerlink" title="概念层面"></a>概念层面</h3><ol><li>CPU层面<br>操作系统的轮询（同步非阻塞）或者DMA（异步非阻塞）</li><li><p>线程层面<br>在线程层面，操作系统将底层异步非阻塞的IO方式进行封装，把相关系统调用以同步方式展现出来。然而，同步阻塞的IO会使线程挂起，同步非阻塞的IO会消耗CPU资源在轮询上。为了解决这一问题，就有3种思路：</p><ol><li>多线程（同步阻塞）；</li><li>IO多路复用（select，poll，epoll）（同步非阻塞，严格地来讲，是把阻塞点改变了位置）；</li><li>直接暴露出异步的IO接口，如kernel-aio和IOCP（异步非阻塞）。</li></ol></li><li><p>程序层面</p></li></ol><p>当然这里讨论的是IO的同步异步阻塞非阻塞，个人认为是Java 网络IO是属于程序层面的</p><h2 id="Java-IO"><a href="#Java-IO" class="headerlink" title="Java IO"></a>Java IO</h2><h3 id="BIO（Blocking-I-O）"><a href="#BIO（Blocking-I-O）" class="headerlink" title="BIO（Blocking I/O）"></a>BIO（Blocking I/O）</h3><p>BIO通信（一请求一应答）模型图如下</p><h3 id="NIO（New-I-O）"><a href="#NIO（New-I-O）" class="headerlink" title="NIO（New I/O）"></a>NIO（New I/O）</h3><h3 id="AIO（Asynchronous-I-O）"><a href="#AIO（Asynchronous-I-O）" class="headerlink" title="AIO（Asynchronous I/O）"></a>AIO（Asynchronous I/O）</h3>]]></content>
+    <content type="html"><![CDATA[<h1 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h1><h2 id="同步异步，阻塞非阻塞"><a href="#同步异步，阻塞非阻塞" class="headerlink" title="同步异步，阻塞非阻塞"></a>同步异步，阻塞非阻塞</h2><h3 id="同步异步"><a href="#同步异步" class="headerlink" title="同步异步"></a>同步异步</h3><p>同步和异步关注的是消息通信机制（调用方调用方式）</p><ol><li>同步<br> 同步就是发起一个调用后，被调用者未处理完请求之前，调用不返回。</li><li>异步<br> 异步就是发起一个调用后，立刻得到被调用者的回应表示已接收到请求，但是被调用者并没有返回结果，此时我们可以处理其他的请求，被调用者通常依靠事件，回调等机制来通知调用者其返回结果。</li></ol><h3 id="阻塞非阻塞"><a href="#阻塞非阻塞" class="headerlink" title="阻塞非阻塞"></a>阻塞非阻塞</h3><p>阻塞和非阻塞关注的是程序在等待调用结果（消息，返回值）时的状态（调用方调用状态）</p><ol><li>阻塞<br>阻塞就是发起一个请求，调用者一直等待请求结果返回，也就是当前线程会被挂起，无法从事其他任务，只有当条件就绪才能继续。</li><li>非阻塞<br>非阻塞就是发起一个请求，调用者不用一直等着结果返回，可以先去干其他事情。</li></ol><h3 id="组合概念"><a href="#组合概念" class="headerlink" title="组合概念"></a>组合概念</h3><p>以上4种概念共有4种组合情况</p><ol><li>同步阻塞（单任务，顺序执行）</li><li>同步非阻塞（多任务，定时查看任务执行状态）</li><li>异步阻塞（单任务，自动提交任务状态）</li><li>异步非阻塞（多任务，自动提交任务状态）</li></ol><h3 id="概念层面"><a href="#概念层面" class="headerlink" title="概念层面"></a>概念层面</h3><ol><li>CPU层面<br>操作系统的轮询（同步非阻塞）或者DMA（异步非阻塞）</li><li><p>线程层面<br>在线程层面，操作系统将底层异步非阻塞的IO方式进行封装，把相关系统调用以同步方式展现出来。然而，同步阻塞的IO会使线程挂起，同步非阻塞的IO会消耗CPU资源在轮询上。为了解决这一问题，就有3种思路：</p><ol><li>多线程（同步阻塞）；</li><li>IO多路复用（select，poll，epoll）（同步非阻塞，严格地来讲，是把阻塞点改变了位置）；</li><li>直接暴露出异步的IO接口，如kernel-aio和IOCP（异步非阻塞）。</li></ol></li><li><p>程序层面</p></li></ol><p>当然这里讨论的是IO的同步异步阻塞非阻塞，个人认为是Java 网络IO是属于程序层面的</p><h2 id="Java-IO"><a href="#Java-IO" class="headerlink" title="Java IO"></a>Java IO</h2><h3 id="BIO（Blocking-I-O）"><a href="#BIO（Blocking-I-O）" class="headerlink" title="BIO（Blocking I/O）"></a>BIO（Blocking I/O）</h3><p>BIO通信（一请求一应答）模型图如下<br><img src="/img/java/1.1BlockingIO.jpg" alt="BIO通信"></p><p>通常有一个独立的Acceptor线程负责监听客户端的连接.再通过服务端中<code>while(true)</code>调用<code>accept()</code>方法等待客户端的连接监听请求,请求一旦接收到一个连接请求，就可以建立通信套接字在这个通信套接字上进行读写操作，此时不能再接收其他客户端连接请求，只能等待同当前连接的客户端的操作执行完成， 不过可以通过多线程来支持多个客户端的连接。</p><p>这个代码是以前在做servlet demo的时候写的</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java">ServerSocket serverSocket = <span class="hljs-keyword">new</span> ServerSocket(port);<br><span class="hljs-comment">// 初始化servletmapping</span><br>initServletMapping();<br>System.out.println(<span class="hljs-string">&quot;demo cata is running:http://localhost:&quot;</span>+port);<br><span class="hljs-keyword">while</span>(<span class="hljs-keyword">true</span>)&#123;<br>    Socket socket = serverSocket.accept();<br>    Request request = <span class="hljs-keyword">new</span> Request(socket.getInputStream());<br>    Response response = <span class="hljs-keyword">new</span> Response(socket.getOutputStream());<br>    dispatch(request, response);<br>    socket.close();<br>&#125;<br></code></pre></td></tr></table></figure><p>如果要让 BIO 通信模型能够同时处理多个客户端请求，就必须使用多线程，也就是说，在接收到客户端连接请求之后为每个客户端创建一个新的线程进行处理，处理完成后通过输出流返回<code>response</code>给客户端，线程销毁。</p><p>也可以通过线程或者线程池优化以上代码，通过多线程的方式（FixedThreadPool）可以控制线程最大数量，保证系统资源控制。</p><p>不过加入线程后，线程的创建，创建，切换带来的成本也很高。并发量增加后会带来很大的安全隐患。</p><h3 id="NIO（New-I-O）"><a href="#NIO（New-I-O）" class="headerlink" title="NIO（New I/O）"></a>NIO（New I/O）</h3><p>NIO是一种同步非阻塞的I/O模型，在Java 1.4 中引入了NIO框架，对应 java.nio 包，提供了 Channel , Selector，Buffer等抽象。</p><p>它支持面向缓冲的，基于通道的I/O操作方法。 NIO提供了与传统BIO模型中的 Socket 和 ServerSocket 相对应的 SocketChannel 和 ServerSocketChannel 两种不同的套接字通道实现,两种通道都支持阻塞和非阻塞两种模式。阻塞模式使用就像传统中的支持一样，比较简单，但是性能和可靠性都不好；非阻塞模式正好与之相反。对于低负载、低并发的应用程序，可以使用同步阻塞I/O来提升开发速率和更好的维护性；对于高负载、高并发的（网络）应用，应使用 NIO 的非阻塞模式来开发。</p><p>NIO通信模型图如下<br><img src="/img/java/1.2NonblockingIO.jpg" alt="BIO通信"></p><h3 id="AIO（Asynchronous-I-O）"><a href="#AIO（Asynchronous-I-O）" class="headerlink" title="AIO（Asynchronous I/O）"></a>AIO（Asynchronous I/O）</h3>]]></content>
     
     
     <summary type="html">BIO,NIO,AIO</summary>
@@ -408,27 +429,6 @@
     
     
     <category term="Java" scheme="https://blog.pyjava.com/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ioui-介绍</title>
-    <link href="https://blog.pyjava.com/2021/04/19/project/io-ui/00_%E4%BB%8B%E7%BB%8D/"/>
-    <id>https://blog.pyjava.com/2021/04/19/project/io-ui/00_%E4%BB%8B%E7%BB%8D/</id>
-    <published>2021-04-18T16:20:00.000Z</published>
-    <updated>2021-04-21T05:01:49.008Z</updated>
-    
-    <content type="html"><![CDATA[<div class="note note-success">            <p><strong>项目地址</strong> <a href="https://github.com/io-ui/io-ui">https://github.com/io-ui/io-ui</a><br><strong>项目文档</strong> <a href="https://io-ui.pyjava.com/">https://io-ui.pyjava.com/</a></p>          </div><h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p>Io-Ui<br>基于vue的ui样式组件</p><h2 id="名称来源"><a href="#名称来源" class="headerlink" title="名称来源"></a>名称来源</h2><p>io 来源于dota2中小精灵</p><h2 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h2><ol><li>Color 颜色</li><li>Font 字体</li><li>Shadow 投影</li></ol><h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><ol><li><input type="checkbox" disabled checked="checked"> Button 按钮</li><li><input type="checkbox" disabled checked="checked"> Icon 图标 </li><li><input type="checkbox" disabled > Toast 消息框</li></ol>]]></content>
-    
-    
-    <summary type="html">ioui介绍(技术栈及需求分析)</summary>
-    
-    
-    
-    <category term="ioui" scheme="https://blog.pyjava.com/categories/ioui/"/>
-    
-    
-    <category term="project" scheme="https://blog.pyjava.com/tags/project/"/>
     
   </entry>
   
